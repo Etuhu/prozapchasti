@@ -17,6 +17,38 @@
 	<body>
 		<div id="pre-loader" class="pre-loader" style="opacity: 0; display: none"></div>
 		<div class="fader"></div>
+		<div class="login-wrapper">
+			<button type="button">
+				<img src="img/close.svg">
+			</button>
+			<div class="login-form-block">
+				<h2 class="basic-title">Войти или создать профиль</h2>
+				<form method="post" action="/user/login" role="form">
+					<div class="form-group">
+						<label for="username">E-mail</label>
+						<input type="text" name="username" required="required" class="form-control" value="">
+					</div>
+					<div class="form-group">
+						<label for="password">Пароль</label>
+						<input type="password" name="password" required="required" class="form-control" value="">
+					</div>
+					<div class="form-group">
+						<div class="form-check">
+							<input type="hidden" name="remember" value="0"><input type="checkbox" name="remember" class="form-check-input" value="1">
+							<label class="form-check-label" for="remember">Запомнить меня</label>
+						</div>
+					</div>
+					<input type="hidden" name="redirect" value="">
+					<div class="form-group">
+						<button type="submit" name="submit" class="btn btn-secondary" value="">Войти</button>
+					</div>
+				</form>
+				<div class="login-form-footer">
+					<a href="/user/register">Регистрация</a>
+					<a href="/user/lostpassword">Забыли пароль?</a>
+				</div>
+			</div>
+		</div>
 		<div class="header header--index">
 			<div class="header-top-row">
 				<div class="container">
@@ -36,10 +68,16 @@
 						<div class="logo-wrapper col-xl-3">
 							<div class="menu-button-wrapper">
 								<button class="navbar-toggler navbar-toggler show" type="button">
-									<span class="navbar-toggler-icon"></span>
+									<span class="navbar-toggler-icon">
+										<span></span>
+										<span></span>
+										<span></span>
+									</span>
 								</button>
 							</div>
-							<img src="img/logo.svg" class="img-fluid" width="302" />
+							<a href="/" class="logo-link">
+								<img src="img/logo.svg" class="img-fluid logo" width="302" />
+							</a>
 						</div>
 						<div class="col-xl-7 search-wrapper">
 							<div id="searchWidget">
@@ -51,7 +89,7 @@
 							</div>
 						</div>
 						<div class="col-xl-2 user-buttons">
-							<a href="#" class="user-button">
+							<a href="#" class="user-button user-button--hearth">
 								<svg width="24" height="22" viewbox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path fill-rule="evenodd" clip-rule="evenodd" d="M4.36488 1.3182C-1.45165 3.96016 0.20377 11.7737 8.00208 18.4856C10.8858 20.9674 11.5494 21.369 12.409 21.1534C13.4711 20.8868 17.8836 16.9581 19.7375 14.6282C24.2791 8.92083 24.2365 3.40825 19.6348 1.3182C17.3647 0.28687 15.0973 0.665493 13.011 2.42483L11.9999 3.27758L10.9887 2.42483C8.90244 0.665493 6.63506 0.28687 4.36488 1.3182Z" fill="currentColor" />
 								</svg>
@@ -66,7 +104,7 @@
 								</svg>
 								<span>Войти</span>
 							</a>
-							<a href="#" class="user-button">
+							<a href="#" class="user-button user-button--cart">
 								<svg width="28" height="25" viewbox="0 0 28 25" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path
 										fill-rule="evenodd"
@@ -75,7 +113,7 @@
 										fill="currentColor"
 									/>
 								</svg>
-								<div class="cart-counter">0</div>
+								<div class="cart-counter">5</div>
 								<span>Корзина</span>
 							</a>
 						</div>
@@ -179,7 +217,7 @@
 								<div class="pic">
 									<img src="img/cat-2.jpg" class="img-fluid">
 								</div>
-								<h3>Дисплеи</h3>
+								<h3>Аккумуляторы</h3>
 							</a>
 						</div>
 						<div class="col-xl-3 catalog-sections-item">
@@ -187,7 +225,7 @@
 								<div class="pic">
 									<img src="img/cat-3.jpg" class="img-fluid">
 								</div>
-								<h3>Дисплеи</h3>
+								<h3>Шлейфы</h3>
 							</a>
 						</div>
 						<div class="col-xl-3 catalog-sections-item">
@@ -195,7 +233,7 @@
 								<div class="pic">
 									<img src="img/cat-4.jpg" class="img-fluid">
 								</div>
-								<h3>Дисплеи</h3>
+								<h3>Камеры</h3>
 							</a>
 						</div>
 						<div class="col-xl-3 catalog-sections-item">
@@ -203,7 +241,7 @@
 								<div class="pic">
 									<img src="img/cat-5.jpg" class="img-fluid">
 								</div>
-								<h3>Дисплеи</h3>
+								<h3>Защитные стекла</h3>
 							</a>
 						</div>
 						<div class="col-xl-3 catalog-sections-item">
@@ -211,7 +249,7 @@
 								<div class="pic">
 									<img src="img/cat-6.jpg" class="img-fluid">
 								</div>
-								<h3>Дисплеи</h3>
+								<h3>Корпусы</h3>
 							</a>
 						</div>
 						<div class="col-xl-3 catalog-sections-item">
@@ -219,7 +257,7 @@
 								<div class="pic">
 									<img src="img/cat-7.jpg" class="img-fluid">
 								</div>
-								<h3>Дисплеи</h3>
+								<h3>Аксессуары</h3>
 							</a>
 						</div>
 						<div class="col-xl-3 catalog-sections-item">
@@ -227,7 +265,7 @@
 								<div class="pic">
 									<img src="img/cat-8.jpg" class="img-fluid">
 								</div>
-								<h3>Дисплеи</h3>
+								<h3>Прочее</h3>
 							</a>
 						</div>
 					</div>
@@ -831,12 +869,73 @@
 			</section>
 			<section class="popular-brands">
 				<div class="container">
-					<h3 class="basic-title">Популярные бренды</h3>
+					<h2 class="basic-title">Популярные бренды</h2>
 					<div class="row">
 						<div class="col-xl-9 popular-links">
-
+							<ul class="nav nav-tabs nav-tabs--popular" id="popularTab" role="tablist">
+								<li class="nav-item" role="presentation">
+									<button class="nav-link active" id="first-tab" data-bs-toggle="tab" data-bs-target="#first" type="button" role="tab" aria-controls="first" aria-selected="true">first</button>
+								</li>
+								<li class="nav-item" role="presentation">
+									<button class="nav-link" id="second-tab" data-bs-toggle="tab" data-bs-target="#second" type="button" role="tab" aria-controls="second" aria-selected="false">second</button>
+								</li>
+								<li class="nav-item" role="presentation">
+									<button class="nav-link" id="third-tab" data-bs-toggle="tab" data-bs-target="#third" type="button" role="tab" aria-controls="third" aria-selected="false">third</button>
+								</li>
+								<li class="nav-item" role="presentation">
+									<button class="nav-link" id="fourth-tab" data-bs-toggle="tab" data-bs-target="#fourth" type="button" role="tab" aria-controls="fourth" aria-selected="false">fourth</button>
+								</li>
+								<li class="nav-item" role="presentation">
+									<button class="nav-link" id="fifth-tab" data-bs-toggle="tab" data-bs-target="#fifth" type="button" role="tab" aria-controls="fifth" aria-selected="false">fifth</button>
+								</li>
+							</ul>
+							<div class="tab-content tab-content--popular" id="popularTabContent">
+								<div class="tab-pane fade show active" id="first" role="tabpanel" aria-labelledby="first-tab">
+									<a href="#">Apple</a>
+									<a href="#">Samsung</a>
+									<a href="#">Xiaomi</a>
+									<a href="#">Huawei</a>
+									<a href="#">HTC</a>
+									<a href="#">Lenovo</a>
+									<a href="#">Meizu</a>
+									<a href="#">HP</a>
+									<a href="#">Nokia</a>
+									<a href="#">Sony</a>
+									<a href="#">Asus</a>
+									<a href="#">Fly</a>
+									<a href="#">Acer</a>
+									<a href="#">LG</a>
+									<a href="#">Alcatel</a>
+									<a href="#">Motorola</a>
+									<a href="#">ZTE</a>
+									<a href="#">Micromax</a>
+								</div>
+								<div class="tab-pane fade" id="second" role="tabpanel" aria-labelledby="second-tab">
+									<a href="#">Lenovo</a>
+									<a href="#">Apple</a>
+									<a href="#">Acer</a>
+									<a href="#">LG</a>
+									<a href="#">Samsung</a>
+									<a href="#">Xiaomi</a>
+									<a href="#">Micromax</a>
+									<a href="#">Huawei</a>
+									<a href="#">HTC</a>
+									<a href="#">Meizu</a>
+									<a href="#">HP</a>
+									<a href="#">Nokia</a>
+									<a href="#">Sony</a>
+									<a href="#">Asus</a>
+									<a href="#">Fly</a>
+									<a href="#">Alcatel</a>
+									<a href="#">Motorola</a>
+									<a href="#">ZTE</a>
+								</div>
+								<div class="tab-pane fade" id="third" role="tabpanel" aria-labelledby="third-tab">еще ссылки...</div>
+								<div class="tab-pane fade" id="fourth" role="tabpanel" aria-labelledby="fourth-tab">еще ссылки...</div>
+								<div class="tab-pane fade" id="fifth" role="tabpanel" aria-labelledby="fifth-tab">еще ссылки...</div>
+							</div>
 						</div>
-						<div class="col-xl-9 popular-banner">
+						<div class="col-xl-3 popular-banner">
 							<div class="content">
 								<a href="#" class="popular-banner-link">
 									<img src="img/bottom-banner.jpg" class="img-fluid" width="409">
@@ -847,9 +946,146 @@
 					</div>
 				</div>
 			</section>
+			<section class="news-widget-wrapper">
+				<div class="container">
+					<div class="title-wrapper">
+						<h2 class="basic-title">
+							Новости магазина
+						</h2>
+						<a href="#" class="basic-title-link">Смотреть все</a>
+					</div>
+
+				</div>
+			</section>
+			<section class="interesting-links">
+				<div class="container">
+					<h2 class="basic-title">Вас может заинтересовать</h2>
+					<div class="interesting-links-wrapper">
+						<a href="#">Беспроводные наушники</a>
+						<a href="#">Внешние аккумуляторы</a>
+						<a href="#">Держатели для телефона</a>
+						<a href="#">Клавиатуры и мыши</a>
+						<a href="#">Переходники</a>
+						<a href="#">Универсальные аккумуляторы</a>
+						<a href="#">Картридеры</a>
+						<a href="#">Карты памяти</a>
+						<a href="#">Колонки</a>
+						<a href="#">Ремешки для часов</a>
+						<a href="#">Беспроводные зарядки</a>
+						<a href="#">Гарнитуры</a>
+						<a href="#">Зарядные устройства</a>
+						<a href="#">Защитные пленки</a>
+						<a href="#">Кабели</a>
+						<a href="#">Селфи-палки</a>
+						<a href="#">Чехлы</a>
+						<a href="#">Гарнитуры</a>
+					</div>
+				</div>
+			</section>
 		</main>
-		<div class="footer-wrapper">
-			<div class="footer"></div>
+		<div class="footer">
+			<div class="container">
+				<div class="footer-top-row">
+					<div class="row">
+						<div class="col-md-4 footer-links-block">
+							<h4>Помощь</h4>
+							<ul class="column-list column-list--two">
+								<li>
+									<a href="#">Как сделать заказ</a>
+								</li>
+								<li>
+									<a href="#">Оплата</a>
+								</li>
+								<li>
+									<a href="#">Возврат</a>
+								</li>
+								<li>
+									<a href="#">Доставка</a>
+								</li>
+								<li>
+									<a href="#">Вопрос/ответ</a>
+								</li>
+								<li>
+									<a href="#">Гарантии</a>
+								</li>
+								<li>
+									<a href="#">Скидки</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-md-2 footer-links-block">
+							<h4>Партнерам</h4>
+							<ul>
+								<li>
+									<a href="#">Оптовым продавцам</a>
+								</li>
+								<li>
+									<a href="#">Продавцам</a>
+								</li>
+								<li>
+									<a href="#">Поставщикам</a>
+								</li>
+								<li>
+									<a href="#">Дилерская сеть</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-md-2 footer-links-block">
+							<h4>ПроЗАПЧАСТИ</h4>
+							<ul>
+								<li>
+									<a href="#">О нас</a>
+								</li>
+								<li>
+									<a href="#">Реквизиты</a>
+								</li>
+								<li>
+									<a href="#">Отзывы</a>
+								</li>
+								<li>
+									<a href="#">Новости</a>
+								</li>
+								<li>
+									<a href="#">Контакты</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-md-2 footer-links-block">
+							<h4>Мы в соцсетях</h4>
+							<ul>
+								<li>
+									<a href="#">Вконтакте</a>
+								</li>
+								<li>
+									<a href="#">Одноклассники</a>
+								</li>
+								<li>
+									<a href="#">Телеграм</a>
+								</li>
+								<li>
+									<a href="#">YouTube</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="footer-bottom-row">
+					<p>
+						2022 © Общество с ограниченной ответственностью «ПроЗАПЧАСТИ» - специализированный интернет-магазин запчастей для ваших гаджетов.<br>
+						Все права защищены. Доставка по всей России. <a href="#">Политика конфеденциальности.</a>
+					</p>
+					<div class="dev-wrapper">
+						<a
+							href="http://www.mediatip.ru"
+							class="pic"
+							target="_blank"
+							title="[ мы создаём - все завидуют ]"
+						>2021 © создание сайта, обслуживание и поддержка
+							<img src="/img/copyright_gray.png" width="40" class="img-fluid">
+						</a>
+					</div>
+				</div>
+			</div>
 		</div>
 		<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
 		<script type="text/javascript" src="js/jquery.mCustomScrollbar.min.js"></script>
