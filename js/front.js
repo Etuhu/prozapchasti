@@ -26,9 +26,9 @@ const saleSwiper = new Swiper(".sale-swiper", {
     slidesPerGroup: 4,
     speed: 700,
     simulateTouch: true,
-    autoplay: {
-        delay: 3000,
-    },
+    // autoplay: {
+    //     delay: 3000,
+    // },
     spaceBetween: 30,
     watchOverflow: true,
     navigation: {
@@ -60,9 +60,9 @@ const hitSwiper = new Swiper(".hit-swiper", {
     slidesPerGroup: 4,
     speed: 800,
     simulateTouch: true,
-    autoplay: {
-        delay: 2500,
-    },
+    // autoplay: {
+    //     delay: 2500,
+    // },
     spaceBetween: 30,
     watchOverflow: true,
     navigation: {

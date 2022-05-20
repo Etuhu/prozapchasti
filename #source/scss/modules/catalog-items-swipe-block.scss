@@ -1,0 +1,53 @@
+.catalog-items-swipe-block {
+    > .container {
+        position: relative;
+    }
+    .swiper {
+
+    }
+    .swiper-pagination {
+        @media (min-width: 768px) {
+            display: none;
+        }
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: white;
+        box-shadow: 3px 4px 11px -7px #C4C4C4;
+        top: 47%;
+        z-index: 10;
+        transition: 0.2s ease;
+        &:hover {
+            box-shadow: 3px 4px 11px -7px $red;
+            transition: 0.2s ease;
+            &::after {
+                background-image: url("../img/arrow-red.svg");
+                transition: 0.2s ease;
+            }
+        }
+        &::after {
+            background-image: url("../img/arrow.svg");
+            background-repeat: no-repeat;
+            content: "";
+            width: 25px;
+            height: 25px;
+        }
+    }
+    .swiper-button-prev {
+        left: -17px;
+        &::after {
+            transform: rotate(180deg);
+        }
+    }
+    .swiper-button-next {
+        right: -17px;
+    }
+    .swiper-button-disabled {
+        opacity: 0;
+        transition: 0.2s ease;
+        z-index: -1;
+    }
+}

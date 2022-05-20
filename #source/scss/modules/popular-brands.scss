@@ -1,0 +1,113 @@
+.popular-brands {
+    .basic-title {
+        margin-bottom: 70px;
+    }
+    .popular-links {
+        .nav-tabs--popular {
+            border-bottom: unset;
+            .nav-item {
+                margin-right: 66px;
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+            .nav-link {
+                padding: 0;
+                margin-bottom: 0;
+                border: unset;
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+                color: black;
+                font-weight: 700;
+                font-size: 1.35rem;
+                padding-bottom: 4px;
+                border-bottom: 5px solid rgba(255, 255, 255, 0);
+                &.active {
+                    border-bottom: 5px solid #DE0000;
+                }
+            }
+        }
+        .tab-content--popular {
+            .tab-pane {
+                padding-top: 60px;
+                padding-right: 100px;
+                &.active {
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+                }
+                a {
+                    color: black;
+                    font-weight: 500;
+                    font-size: 1.35rem;
+                    display: block;
+                    margin-right: 6.5%;
+                    margin-bottom: 30px;
+                    position: relative;
+                    transition: 0.2s ease;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                    &:hover {
+                        color: $red;
+                        transition: 0.2s ease;
+                        &::after {
+                            width: 100%;
+                            transition: 0.2s ease;
+                        }
+                    }
+                    &::after {
+                        position: absolute;
+                        bottom: -3px;
+                        left: 50%;
+                        height: 2px;
+                        width: 0;
+                        background-color: $red;
+                        content: "";
+                        transform: translateX(-50%);
+                        transition: 0.2s ease;
+                    }
+                }
+            }
+        }
+    }
+    .popular-banner {
+        border-radius: 10px;
+        .content {
+            border-radius: 10px;
+            .popular-banner-link {
+                display: block;
+                width: 100%;
+                height: 100%;
+                position: relative;
+                &:hover {
+                    .popular-banner-title {
+                        background-color: $violet;
+                        transition: 0.2s ease;
+                    }
+                }
+                .popular-banner-title {
+                    position: absolute;
+                    background-color: $red;
+                    width: 85%;
+                    max-width: 85%;
+                    color: white;
+                    bottom: 26px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    font-weight: 700;
+                    font-size: 1.35rem;
+                    padding: 12px 20px;
+                    border-radius: 10px;
+                    transition: 0.2s ease;
+                }
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+        }
+    }
+}

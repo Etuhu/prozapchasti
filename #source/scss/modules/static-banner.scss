@@ -1,0 +1,36 @@
+.static-banner {
+    margin-bottom: 160px;
+    .content {
+        background-image: radial-gradient(90% 907.23% at 67.88% 38.51%, #EFFF8B 0%, #70DC8E 43.75%, #4D8AC4 100%);
+        border-radius: 10px;
+        .description {
+            padding: 45px 63px;
+            color: white;
+            font-size: 1.35rem;
+
+            .static-banner-title {
+                font-weight: 800;
+                font-size: 3.5rem;
+                line-height: 1.125;
+                text-transform: uppercase;
+            }
+            .static-banner-button {
+                width: fit-content;
+                background-color: $red;
+                border-radius: 10px;
+                font-weight: 700;
+                font-size: 1.3rem;
+                line-height: 1;
+                padding: 12px 32px 13px;
+                margin-top: 30px;
+            }
+        }
+        .pic {
+            .pic-content {
+                > img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

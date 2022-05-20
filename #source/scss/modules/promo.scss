@@ -1,0 +1,30 @@
+.promo {
+    .promo-swiper {
+        padding-bottom: 100px;
+        .swiper-slide {
+            img {
+                border-radius: 10px;
+            }
+        }
+    }
+    .promo-swiper-pagination {
+        bottom: 45px;
+        .swiper-pagination-bullet {
+            background-color: $red;
+            margin-left: 12px;
+            margin-right: 12px;
+            &.swiper-pagination-bullet-active-main {
+                width: 12px;
+                height: 12px;
+            }
+            &.swiper-pagination-bullet-active-prev,
+            &.swiper-pagination-bullet-active-next {
+                transform: scale(1);
+            }
+            &.swiper-pagination-bullet-active-prev-prev,
+            &.swiper-pagination-bullet-active-next-next {
+                transform: scale(0.66);
+            }
+        }
+    }
+}
