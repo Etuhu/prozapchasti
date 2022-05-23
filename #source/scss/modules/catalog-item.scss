@@ -25,7 +25,8 @@
                         padding: 9px 11px 10px;
                         margin-right: 10px;
                         margin-bottom: 10px;
-                        &:hover {
+                        &:hover,
+                        &:focus {
                             opacity: 1;
                         }
                         &:last-child {
@@ -38,7 +39,8 @@
         .info {
             a {
                 color: black;
-                &:hover {
+                &:hover,
+                &:focus {
                     opacity: 0.7;
                 }
             }

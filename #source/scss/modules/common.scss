@@ -34,7 +34,8 @@
 
 @mixin icons {
     font-size: 16px;
-    &:hover {
+    &:hover,
+    &:focus {
         color: #999;
     }
 }
@@ -63,7 +64,8 @@
 
 .content-block {
     &.content-block-editable {
-        &:hover {
+        &:hover,
+        &:focus {
             border: #990000 1px dashed;
             cursor: pointer;
         }
@@ -221,7 +223,8 @@ table.fancytree-container, ul.fancytree-container {
                 border-right: 0;
                 background: transparent;
                 color: #000;
-                &:hover {
+                &:hover,
+                &:focus {
                     background: #0f74a8;
                     color: #fff;
                     text-decoration: none;
@@ -277,7 +280,8 @@ table.fancytree-container, ul.fancytree-container {
 
 .landing-block-editable {
     display: block;
-    &:hover {
+    &:hover,
+    &:focus {
         border: #990000 1px dashed;
         cursor: pointer;
     }

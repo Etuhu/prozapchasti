@@ -1,0 +1,72 @@
+.footer {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    .footer-top-row {
+        .footer-links-block {
+            font-weight: 500;
+            font-size: 0.78rem;
+            line-height: 1.28;
+            > h4 {
+                font-size: 0.78rem;
+                line-height: 1.28;
+                font-weight: 700;
+                margin-bottom: 20px;
+            }
+            > ul {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                &.column-list {
+                    > li {
+                        page-break-inside: avoid;
+                        break-inside: avoid;
+                    }
+                }
+                &.column-list--two {
+                    column-count: 2;
+                }
+                li {
+                    margin-bottom: 10px;
+                    a {
+                        color: black;
+                        &:hover,
+                        &:focus {
+                            color: $red;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer-bottom-row {
+        text-align: center;
+        padding-top: 55px;
+        line-height: 1.66;
+        color: #6B6B6B;
+        a {
+            color: inherit;
+            text-decoration: underline;
+            &:hover,
+            &:focus {
+                color: $violet;
+            }
+        }
+        .dev-wrapper {
+            a {
+                color: unset;
+                text-decoration: none;
+                &:hover,
+                &:focus {
+                    img {
+                        transform: rotate(-360deg);
+                        transition: 0.5s ease;
+                    }
+                }
+                img {
+                    margin-left: 20px;
+                    transition: 0.5s ease;
+                }
+            }
+        }
+    }
+}

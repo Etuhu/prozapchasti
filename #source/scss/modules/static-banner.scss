@@ -1,5 +1,17 @@
 .static-banner {
     margin-bottom: 160px;
+    .static-banner-link {
+        &:hover {
+            .content .description .static-banner-button {
+                background-color: $violet;
+                transition: 0.2s ease;
+            }
+            .content .pic .pic-content > img {
+                transform: scale(1.05);
+                transition: 0.7s ease;
+            }
+        }
+    }
     .content {
         background-image: radial-gradient(90% 907.23% at 67.88% 38.51%, #EFFF8B 0%, #70DC8E 43.75%, #4D8AC4 100%);
         border-radius: 10px;
@@ -23,12 +35,17 @@
                 line-height: 1;
                 padding: 12px 32px 13px;
                 margin-top: 30px;
+                transition: 0.2s ease;
             }
         }
         .pic {
+            overflow: hidden;
             .pic-content {
+                overflow: hidden;
+                border-radius: 0px 222px;
                 > img {
                     width: 100%;
+                    transition: 0.7s ease;
                 }
             }
         }

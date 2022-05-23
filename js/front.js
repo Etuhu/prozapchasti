@@ -1,349 +1,170 @@
+//Появление блоков главного меню и авторизации
+let body = document.body;
+let bodyFader = body.querySelector(".fader");
+let loginButton = document.getElementById("loginBtn");
+let loginModule = document.querySelector(".login-wrapper");
+let loginCloseButton = document.querySelector(".login-wrapper .close-btn");
+let mainMenu = document.querySelector(".main-menu");
+let openMenuButton = document.querySelector(".navbar-toggler");
+let closeMenuButton = document.querySelector(".main-menu .close-btn");
+let headerMenuItems = document.querySelectorAll(".main-menu .navbar-nav .nav-link");
+
+
+let loginMenuHandler = function () {
+    loginModule.classList.toggle("show");
+    body.classList.toggle("fixed");
+}
+
+loginButton.addEventListener("click", function () {
+    loginMenuHandler();
+});
+
+loginCloseButton.addEventListener("click", function () {
+    loginMenuHandler();
+});
+
+let mainMenuHandler = function () {
+    mainMenu.classList.toggle("show");
+    body.classList.toggle("fixed");
+}
+
+openMenuButton.addEventListener("click", function () {
+    mainMenuHandler();
+});
+
+closeMenuButton.addEventListener("click", function () {
+    mainMenuHandler();
+});
+
+bodyFader.addEventListener("click", function () {
+	if (loginModule.classList.contains("show")) {
+		loginMenuHandler();
+	}
+	if (mainMenu.classList.contains("show")) {
+		mainMenuHandler();
+	}
+});
+
+headerMenuItems.forEach(function(headerMenuItem) {
+    headerMenuItem.addEventListener("click", function () {
+		mainMenuHandler();
+    });
+});
+
+//Прилипающая шапка
+let header = document.querySelector(".header");
+function onWindowScroll() {
+	if (window.pageYOffset > header.clientHeight) {
+		header.classList.add("fixed-top");
+	} else {
+		header.classList.remove("fixed-top");
+	}
+}
+window.addEventListener("scroll", onWindowScroll);
+window.addEventListener("DOMContentLoaded", onWindowScroll);
+
 //Слайдеры
 const promoSwiper = new Swiper(".promo-swiper", {
-    slidesPerView: 1,
-    slidesPerGroup: 1,
-    speed: 1000,
-    simulateTouch: true,
-    autoplay: {
-        delay: 5000,
-    },
-    effect: "fade",
-    spaceBetween: 0,
-    watchOverflow: true,
-    navigation: {
-        nextEl: ".promo-swiper-button-next",
-        prevEl: ".promo-swiper-button-prev",
-    },
-    pagination: {
-      el: '.promo-swiper-pagination',
-      clickable: true,
-      dynamicBullets: true,
-    },
+	slidesPerView: 1,
+	slidesPerGroup: 1,
+	speed: 1000,
+	simulateTouch: true,
+	autoplay: {
+		delay: 5000,
+	},
+	effect: "fade",
+	spaceBetween: 0,
+	watchOverflow: true,
+	navigation: {
+		nextEl: ".promo-swiper-button-next",
+		prevEl: ".promo-swiper-button-prev",
+	},
+	pagination: {
+		el: ".promo-swiper-pagination",
+		clickable: true,
+		dynamicBullets: true,
+	},
 });
 
 const saleSwiper = new Swiper(".sale-swiper", {
-    slidesPerView: 6,
-    slidesPerGroup: 4,
-    speed: 700,
-    simulateTouch: true,
-    // autoplay: {
-    //     delay: 3000,
-    // },
-    spaceBetween: 30,
-    watchOverflow: true,
-    navigation: {
-        nextEl: ".sale-swiper-button-next",
-        prevEl: ".sale-swiper-button-prev",
-    },
-    pagination: {
-      el: '.sale-swiper-pagination',
-      clickable: true,
-      dynamicBullets: true,
-    },
-    breakpoints: {
-        // when window width is >= 1200px
-        1500: {
-            slidesPerView: 6,
-            slidesPerGroup: 6,
-            spaceBetween: 30,
-        },
-        300: {
-            slidesPerView: 2,
-            slidesPerGroup: 2,
-            spaceBetween: 10,
-        },
-    },
+	slidesPerView: 6,
+	slidesPerGroup: 4,
+	speed: 700,
+	simulateTouch: true,
+	// autoplay: {
+	//     delay: 3000,
+	// },
+	spaceBetween: 30,
+	watchOverflow: true,
+	navigation: {
+		nextEl: ".sale-swiper-button-next",
+		prevEl: ".sale-swiper-button-prev",
+	},
+	pagination: {
+		el: ".sale-swiper-pagination",
+		clickable: true,
+		dynamicBullets: true,
+	},
+	breakpoints: {
+		// when window width is >= 1200px
+		1500: {
+			slidesPerView: 6,
+			slidesPerGroup: 6,
+			spaceBetween: 30,
+		},
+		300: {
+			slidesPerView: 2,
+			slidesPerGroup: 2,
+			spaceBetween: 10,
+		},
+	},
 });
 
 const hitSwiper = new Swiper(".hit-swiper", {
-    slidesPerView: 6,
-    slidesPerGroup: 4,
-    speed: 800,
-    simulateTouch: true,
-    // autoplay: {
-    //     delay: 2500,
-    // },
-    spaceBetween: 30,
-    watchOverflow: true,
-    navigation: {
-        nextEl: ".hit-swiper-button-next",
-        prevEl: ".hit-swiper-button-prev",
-    },
-    pagination: {
-      el: '.hit-swiper-pagination',
-      clickable: true,
-      dynamicBullets: true,
-    },
-    breakpoints: {
-        // when window width is >= 1200px
-        1500: {
-            slidesPerView: 6,
-            slidesPerGroup: 6,
-            spaceBetween: 30,
-        },
-        300: {
-            slidesPerView: 2,
-            slidesPerGroup: 2,
-            spaceBetween: 10,
-        },
-    },
-});
-
-
-
-
-
-const complexMarketingSwiper = new Swiper(".complex-marketing-swiper", {
-    slidesPerView: 3,
-    slidesPerGroup: 3,
-    speed: 1000,
-    simulateTouch: false,
-    spaceBetween: 30,
-    watchOverflow: true,
-    watchSlidesProgress: 'true',
-    navigation: {
-        nextEl: ".complex-marketing-swiper-button-next",
-        prevEl: ".complex-marketing-swiper-button-prev",
-    },
-    pagination: {
-      el: '.complex-marketing-swiper-pagination',
-      clickable: 'true',
-    },
-    breakpoints: {
-        // when window width is >= 1200px
-        1500: {
-            slidesPerView: 3,
-            slidesPerGroup: 3,
-            spaceBetween: 30,
-            simulateTouch: false,
-            // autoHeight: false,
-        },
-        768: {
-            slidesPerView: 2.4,
-            slidesPerGroup: 1,
-            spaceBetween: 20,
-        },
-        576: {
-            slidesPerView: 1.4,
-            slidesPerGroup: 1,
-            spaceBetween: 20,
-            simulateTouch: true,
-        },
-        300: {
-            slidesPerView: 1,
-            slidesPerGroup: 1,
-            spaceBetween: 10,
-            // autoHeight: true,
-        },
-    },
-});
-
-const otherServicesSwiper = new Swiper(".other-services-swiper", {
-    speed: 1000,
-    simulateTouch: "false",
-    watchOverflow: "true",
-    pagination: {
-        el: ".other-services-swiper-pagination",
-        clickable: "true",
-    },
-    watchSlidesProgress: "true",
-    breakpoints: {
-        // when window width is >= 1200px
-        1200: {
-            grid: {
-                fill: "row",
-                rows: 3,
-            },
-            slidesPerView: 3,
-            spaceBetween: 0,
-        },
-        768: {
-            grid: {
-                fill: "row",
-                rows: 4,
-            },
-            slidesPerView: 2,
-            spaceBetween: 0,
-        },
-        576: {
-            slidesPerView: 1.5,
-            slidesPerGroup: 1,
-            spaceBetween: 20,
-        },
-        300: {
-            slidesPerView: 1.2,
-            slidesPerGroup: 1,
-            spaceBetween: 20,
-        },
-    },
-});
-
-
-const sliderProjectGalleryThumbs = new Swiper(".slider__thumbs--projectgallery .swiper", {
-	direction: "vertical",
-	slidesPerView: 4,
-	spaceBetween: 60,
+	slidesPerView: 6,
+	slidesPerGroup: 4,
+	speed: 800,
+	simulateTouch: true,
+	// autoplay: {
+	//     delay: 2500,
+	// },
+	spaceBetween: 30,
+	watchOverflow: true,
 	navigation: {
-		nextEl: ".slider__thumbs--projectgallery__next",
-		prevEl: ".slider__thumbs--projectgallery__prev"
+		nextEl: ".hit-swiper-button-next",
+		prevEl: ".hit-swiper-button-prev",
 	},
-	mousewheel: "true",
-	freeMode: "true",
-	breakpoints: {
-		0: {
-			direction: "horizontal",
-            spaceBetween: 5,
-            slidesPerView: 5,
-            mousewheel: "false",
-		},
-		575: {
-            spaceBetween: 10,
-            // slidesPerView: 5,
-            slidesPerView: 4.5,
-			direction: "horizontal",
-		},
-		768: {
-            spaceBetween: 15,
-            // slidesPerView: 5,
-            slidesPerView: 3.5,
-			direction: "vertical",
-		},
-        992: {
-            spaceBetween: 20,
-            slidesPerView: 3.5,
-			direction: "vertical",
-        },
-        1200: {
-            spaceBetween: 10,
-            slidesPerView: 3.7,
-        },
-        1500: {
-            spaceBetween: 10,
-            slidesPerView: 3.7,
-        },
-        1700: {
-            spaceBetween: 10,
-            slidesPerView: 3.5,
-        },
-        1921: {
-            spaceBetween: 15,
-            slidesPerView: 3.4,
-        }
-	}
-});
-
-
-const sliderProjectGalleryImages = new Swiper('.slider__images--projectgallery .swiper', {
-	direction: "vertical",
-	slidesPerView: 1,
-	spaceBetween: 20,
-	mousewheel: false,
-	navigation: {
-		nextEl: ".slider__next",
-		prevEl: ".slider__prev"
-	},
-	grabCursor: true,
-	thumbs: {
-		swiper: sliderProjectGalleryThumbs
+	pagination: {
+		el: ".hit-swiper-pagination",
+		clickable: true,
+		dynamicBullets: true,
 	},
 	breakpoints: {
-		0: {
-			direction: "horizontal",
+		// when window width is >= 1200px
+		1500: {
+			slidesPerView: 6,
+			slidesPerGroup: 6,
+			spaceBetween: 30,
 		},
-		768: {
-			direction: "vertical",
-		}
-	}
+		300: {
+			slidesPerView: 2,
+			slidesPerGroup: 2,
+			spaceBetween: 10,
+		},
+	},
 });
-
-const feedbackSwiper = new Swiper(".feedback-swiper", {
-    slidesPerView: 3,
-    slidesPerGroup: 3,
-    speed: 1000,
-    simulateTouch: "true",
-    spaceBetween: 30,
-    watchOverflow: "true",
-    centeredSlides: false,
-    navigation: {
-        nextEl: ".feedback-swiper-button-next",
-        prevEl: ".feedback-swiper-button-prev",
-    },
-    // autoplay: "true",
-    pagination: {
-      el: ".feedback-swiper-pagination",
-      clickable: "true",
-      type: "fraction",
-    },
-    breakpoints: {
-        300: {
-            centeredSlides: true,
-            slidesPerView: 1,
-            slidesPerGroup: 1,
-            spaceBetween: 10,
-        },
-        576: {
-            slidesPerView: 1.5,
-            slidesPerGroup: 1,
-            spaceBetween: 10,
-            centeredSlides: true,
-        },
-        768: {
-            slidesPerView: 1.7,
-            slidesPerGroup: 1,
-            spaceBetween: 10,
-            centeredSlides: true,
-        },
-        992: {
-            slidesPerView: 2.3,
-            slidesPerGroup: 2,
-            spaceBetween: 10,
-            centeredSlides: false,
-        },
-        1200: {
-            slidesPerView: 2.5,
-            slidesPerGroup: 2,
-            spaceBetween: 15,
-        },
-        1300: {
-            slidesPerView: 3,
-            slidesPerGroup: 3,
-            spaceBetween: 15,
-            simulateTouch: "true",
-        },
-        1600: {
-            spaceBetween: 20,
-        },
-    },
-});
-
-const clientFeedbackSwiper = new Swiper(".client-feedback-swiper", {
-    slidesPerView: 1,
-    slidesPerGroup: 1,
-    speed: 1000,
-    simulateTouch: true,
-    autoplay: {
-        delay: 5000,
-    },
-    spaceBetween: 0,
-    watchOverflow: true,
-    pagination: {
-      el: '.client-feedback-swiper-pagination',
-      clickable: 'true',
-    },
-});
-
 
 //Подключение кастомного скролла при ширине экрана больше 991 пикселя
 if ($(window).width() > 991) {
-    (function ($) {
-        $(window).on("load", function () {
-            $(".text-content-scroll").mCustomScrollbar({
-                theme: 'dark',
-                scrollInertia: "300",
-                advanced: {
-                    updateOnContentResize: "true",
-                },
-            });
-        });
-    })(jQuery);
-};
+	(function ($) {
+		$(window).on("load", function () {
+			$(".text-content-scroll").mCustomScrollbar({
+				theme: "dark",
+				scrollInertia: "300",
+				advanced: {
+					updateOnContentResize: "true",
+				},
+			});
+		});
+	})(jQuery);
+}

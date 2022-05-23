@@ -20,7 +20,8 @@
         top: 47%;
         z-index: 10;
         transition: 0.2s ease;
-        &:hover {
+        &:hover,
+        &:focus {
             box-shadow: 3px 4px 11px -7px $red;
             transition: 0.2s ease;
             &::after {

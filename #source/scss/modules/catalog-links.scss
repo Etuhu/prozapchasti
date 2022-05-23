@@ -27,7 +27,8 @@
             margin-right: 40px;
             border-bottom: 1px dotted black;
             margin-top: 13px;
-            &:hover {
+            &:hover,
+            &:focus {
                 opacity: 0.9;
                 border-bottom: 1px solid black;
             }

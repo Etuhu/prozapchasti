@@ -305,7 +305,8 @@
                     background: #ddd;
                     color: #000;
                 }
-                &:hover {
+                &:hover,
+                &:focus {
                     color: #000;
                 }
                 color: #999;
@@ -416,7 +417,8 @@
                     padding: 10px;
                     border-bottom: #fff 1px solid;
                     cursor: pointer;
-                    &:hover {
+                    &:hover,
+                    &:focus {
                         background: #ddd;
                     }
                     .name {
@@ -459,7 +461,8 @@
             padding: 15px;
 
             cursor: pointer;
-            &:hover {
+            &:hover,
+            &:focus {
                 box-shadow: 0px 0px 5px 1px rgba(194,194,194,1);
             }
             .title {
@@ -551,7 +554,7 @@
                             margin-right: 10px;
                             padding: 10px 15px;
                             background: #ddd;
-                            &.active, &:hover {
+                            &.active, &:hover, &:focus {
                                 background: #cc0000;
                                 color: #fff;
                             }
@@ -762,7 +765,8 @@
             i {
                 transition: all 0.5s ease;
             }
-            &:hover {
+            &:hover,
+            &:focus {
                 i {
                     color: #cc0000;
                 }
@@ -853,7 +857,8 @@
                 top: 20px;
             }
 
-            &:hover {
+            &:hover,
+            &:focus {
                 box-shadow: 0px 0px 5px 1px rgba(194, 194, 194, 1);
             }
 

@@ -19,12 +19,15 @@
 		<div id="pre-loader" class="pre-loader" style="opacity: 0; display: none"></div>
 		<div class="fader"></div>
 		<div class="login-wrapper">
-			<button type="button">
-				<img src="img/close.svg">
+			<button type="button" class="close-btn">
+				<svg width="50" height="50" viewbox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M1.00012 1L43.073 43.0729" stroke="currentColor"/>
+					<path d="M43.0729 1L1.00002 43.0729" stroke="currentColor"/>
+				</svg>
 			</button>
 			<div class="login-form-block">
 				<h2 class="basic-title">Войти или создать профиль</h2>
-				<form method="post" action="/user/login" role="form">
+				<form method="post" action="/user/login" role="form" class="login-form">
 					<div class="form-group">
 						<label for="username">E-mail</label>
 						<input type="text" name="username" required="required" class="form-control" value="">
@@ -50,12 +53,44 @@
 				</div>
 			</div>
 		</div>
+		<div class="main-menu">
+			<button type="button" class="close-btn">
+				<svg width="50" height="50" viewbox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M1.00012 1L43.073 43.0729" stroke="currentColor"/>
+					<path d="M43.0729 1L1.00002 43.0729" stroke="currentColor"/>
+				</svg>
+			</button>
+			<div class="menu">
+				<nav class="navbar" role="navigation">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a href="#" class="nav-link">О нас</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link">Каталог</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link">Покупателям</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link">Сервис</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link">Новости</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link">Контакты</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
 		<div class="header header--index">
 			<div class="header-top-row">
 				<div class="container">
 					<div class="row">
-						<div class="col-xl-3 header-top-slogan">Бесплатная доставка по России</div>
-						<div class="col-xl-9 header-top-buttons">
+						<div class="col-lg-4 col-xxl-3 header-top-slogan">Бесплатная доставка по России</div>
+						<div class="col-lg-8 col-xxl-9 header-top-buttons">
 							<a href="#" class="basic-button basic-button--violet">Распродажа</a>
 							<a href="#" class="basic-button basic-button--red">Новинки</a>
 							<a href="#" class="basic-button basic-button--green">Предзаказ</a>
@@ -66,7 +101,7 @@
 			<div class="header-bottom-row">
 				<div class="container">
 					<div class="row">
-						<div class="logo-wrapper col-xl-3">
+						<div class="logo-wrapper col-md-5 col-lg-4 col-xl-3">
 							<div class="menu-button-wrapper">
 								<button class="navbar-toggler navbar-toggler show" type="button">
 									<span class="navbar-toggler-icon">
@@ -80,7 +115,7 @@
 								<img src="img/logo.svg" class="img-fluid logo" width="302" />
 							</a>
 						</div>
-						<div class="col-xl-7 search-wrapper">
+						<div class="col-md-7 col-lg-8 col-xl-6 col-xxl-7 search-wrapper">
 							<div id="searchWidget">
 								<form action="#">
 									<div class="input-group">
@@ -89,14 +124,14 @@
 								</form>
 							</div>
 						</div>
-						<div class="col-xl-2 user-buttons">
+						<div class="col-xl-3 col-xxl-2 user-buttons">
 							<a href="#" class="user-button user-button--hearth">
 								<svg width="24" height="22" viewbox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path fill-rule="evenodd" clip-rule="evenodd" d="M4.36488 1.3182C-1.45165 3.96016 0.20377 11.7737 8.00208 18.4856C10.8858 20.9674 11.5494 21.369 12.409 21.1534C13.4711 20.8868 17.8836 16.9581 19.7375 14.6282C24.2791 8.92083 24.2365 3.40825 19.6348 1.3182C17.3647 0.28687 15.0973 0.665493 13.011 2.42483L11.9999 3.27758L10.9887 2.42483C8.90244 0.665493 6.63506 0.28687 4.36488 1.3182Z" fill="currentColor" />
 								</svg>
 								<span>Избранное</span>
 							</a>
-							<a href="#" class="user-button">
+							<a href="javascript:void(0)" class="user-button" id="loginBtn">
 								<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path
 										d="M15 15.9997V13.9996C15.45 13.7766 16.737 12.2445 16.872 11.0475C17.226 11.0205 17.782 10.6954 17.946 9.41239C18.034 8.72336 17.684 8.33635 17.472 8.21434C17.472 8.21434 18 7.2113 18 6.00025C18 3.57215 17.047 1.50006 15 1.50006C15 1.50006 14.289 0 12 0C7.758 0 6 2.72111 6 6.00025C6 7.1043 6.528 8.21434 6.528 8.21434C6.316 8.33635 5.966 8.72436 6.054 9.41239C6.218 10.6954 6.774 11.0205 7.128 11.0475C7.263 12.2445 8.55 13.7766 9 13.9996V15.9997C8 18.9998 0 16.9997 0 24H24C24 16.9997 16 18.9998 15 15.9997Z"
@@ -579,7 +614,7 @@
 			</section>
 			<section class="static-banner">
 				<div class="container">
-					<a href="#">
+					<a href="#" class="static-banner-link">
 						<div class="content">
 							<div class="row">
 								<div class="col-lg-4 description">
@@ -959,7 +994,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="news-widget-wrapper">
+			<section class="news-widget">
 				<div class="container">
 					<div class="title-wrapper">
 						<h2 class="basic-title">
@@ -967,31 +1002,104 @@
 						</h2>
 						<a href="#" class="basic-title-link">Смотреть все</a>
 					</div>
-
+					<div class="news-list">
+						<div class="row">
+							<div class="col-lg-3 news-item">
+								<div class="content">
+									<a href="#">
+										<div class="pic">
+											<img src="img/news-1.jpg" class="img-fluid">
+										</div>
+										<div class="preview">
+											<div class="date">
+												21&nbsp;мая
+											</div>
+											<div class="text">
+												Универсальные зарядные устройства теперь на складе в Кемерово в наличии!
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+							<div class="col-lg-3 news-item">
+								<div class="content">
+									<a href="#">
+										<div class="pic">
+											<img src="img/news-2.jpg" class="img-fluid">
+										</div>
+										<div class="preview">
+											<div class="date">
+												18&nbsp;мая
+											</div>
+											<div class="text">
+												Новинки из мира гаджетов в 2022 году
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+							<div class="col-lg-3 news-item">
+								<div class="content">
+									<a href="#">
+										<div class="pic">
+											<img src="img/news-3.jpg" class="img-fluid">
+										</div>
+										<div class="preview">
+											<div class="date">
+												10&nbsp;апреля
+											</div>
+											<div class="text">
+												Шок! Никто и не думал, что такое возможно: российские ученые выявили 10 причин...
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+							<div class="col-lg-3 news-item">
+								<div class="content">
+									<a href="#">
+										<div class="pic">
+											<img src="img/news-4.jpg" class="img-fluid">
+										</div>
+										<div class="preview">
+											<div class="date">
+												21&nbsp;марта
+											</div>
+											<div class="text">
+												Защита техники от кражи: 5 простых советов для владельцев смартфонов
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</section>
 			<section class="interesting-links">
 				<div class="container">
-					<h2 class="basic-title">Вас может заинтересовать</h2>
-					<div class="interesting-links-wrapper">
-						<a href="#">Беспроводные наушники</a>
-						<a href="#">Внешние аккумуляторы</a>
-						<a href="#">Держатели для телефона</a>
-						<a href="#">Клавиатуры и мыши</a>
-						<a href="#">Переходники</a>
-						<a href="#">Универсальные аккумуляторы</a>
-						<a href="#">Картридеры</a>
-						<a href="#">Карты памяти</a>
-						<a href="#">Колонки</a>
-						<a href="#">Ремешки для часов</a>
-						<a href="#">Беспроводные зарядки</a>
-						<a href="#">Гарнитуры</a>
-						<a href="#">Зарядные устройства</a>
-						<a href="#">Защитные пленки</a>
-						<a href="#">Кабели</a>
-						<a href="#">Селфи-палки</a>
-						<a href="#">Чехлы</a>
-						<a href="#">Гарнитуры</a>
+					<h2 class="basic-title">Вас также может заинтересовать</h2>
+					<div class="row">
+						<div class="col-xxl-8 col-lg-9 interesting-links-wrapper">
+							<a href="#">Беспроводные наушники</a>
+							<a href="#">Внешние аккумуляторы</a>
+							<a href="#">Держатели для телефона</a>
+							<a href="#">Клавиатуры и мыши</a>
+							<a href="#">Переходники</a>
+							<a href="#">Универсальные аккумуляторы</a>
+							<a href="#">Картридеры</a>
+							<a href="#">Карты памяти</a>
+							<a href="#">Колонки</a>
+							<a href="#">Ремешки для часов</a>
+							<a href="#">Беспроводные зарядки</a>
+							<a href="#">Гарнитуры</a>
+							<a href="#">Зарядные устройства</a>
+							<a href="#">Защитные пленки</a>
+							<a href="#">Кабели</a>
+							<a href="#">Селфи-палки</a>
+							<a href="#">Чехлы</a>
+							<a href="#">Гарнитуры</a>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -1093,8 +1201,7 @@
 							class="pic"
 							target="_blank"
 							title="[ мы создаём - все завидуют ]"
-						>2021 © создание сайта, обслуживание и поддержка
-							<img src="/img/copyright_gray.png" width="40" class="img-fluid">
+						>2021 © создание сайта, обслуживание и поддержка<img src="/img/copyright_gray.png" width="40" class="img-fluid">
 						</a>
 					</div>
 				</div>

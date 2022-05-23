@@ -1,0 +1,78 @@
+form {
+    .form-group {
+        margin-bottom: 30px;
+    }
+    label {
+        font-size: 0.9rem;
+        line-height: 2;
+        color: #6B6B6B;
+        margin-bottom: 15px;
+    }
+    input[type=text],
+    input[type=email],
+    input[type=number],
+    input[type=password],
+    select,
+    textarea {
+        border: 1px solid #C4C4C4;
+        border-radius: 10px;
+        padding: 10px 10px 10px 17px;
+        font-weight: 700;
+        font-size: 1.35rem;
+        line-height: 1.25;
+        transition: 0.2s ease;
+        &:hover,
+        &:focus {
+            border: 1px solid $red;
+            transition: 0.2s ease;
+            box-shadow: unset;
+        }
+    }
+    input[type=checkbox] {
+        -webkit-appearance: none;
+	    -moz-appearance: none;
+        width: 23px;
+        height: 23px;
+        border: 1px solid #C4C4C4;
+        border-radius: 3px;
+        box-shadow: unset;
+        &:hover,
+        &:focus {
+            border: 1px solid $red;
+            transition: 0.2s ease;
+            box-shadow: unset;
+            outline: none;
+        }
+        &:checked {
+            background-color: $red;
+            border: none;
+        }
+        + label {
+            margin-left: 10px;
+        }
+    }
+    button[type=submit] {
+        color: white;
+        background-color: $red;
+        border: unset;
+        border-radius: 10px;
+        padding: 13px 10px;
+        font-weight: 700;
+        font-size: 1.35rem;
+        line-height: 1;
+        width: 68%;
+        &:hover,
+        &:focus {
+            background-color: #FF0000;
+            box-shadow: unset;
+        }
+        &:active {
+            border: unset;
+            background-color: $red;
+            &:hover,
+            &:focus {
+                box-shadow: unset;
+            }
+        }
+    }
+}
