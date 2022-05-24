@@ -1,6 +1,15 @@
 .promo {
     .promo-swiper {
         padding-bottom: 100px;
+        @media (max-width: 1920px) {
+            padding-bottom: 75px;
+        }
+        @media (max-width: 1399px) {
+            padding-bottom: 50px;
+        }
+        @media (max-width: 767px) {
+            padding-bottom: 60px;
+        }
         .swiper-slide {
             img {
                 border-radius: 10px;
@@ -9,13 +18,38 @@
     }
     .promo-swiper-pagination {
         bottom: 45px;
+        @media (max-width: 1920px) {
+            bottom: 30px;
+        }
+        @media (max-width: 1399px) {
+            bottom: 20px;
+        }
+        @media (max-width: 767px) {
+            bottom: 30px;
+        }
         .swiper-pagination-bullet {
             background-color: $red;
             margin-left: 12px;
             margin-right: 12px;
+            @media (max-width: 1399px) {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            // @media (max-width: 767px) {
+            //     margin-left: 6px;
+            //     margin-right: 6px;
+            // }
+            // @media (max-width: 575px) {
+            //     margin-left: 4px;
+            //     margin-right: 4px;
+            // }
             &.swiper-pagination-bullet-active-main {
                 width: 12px;
                 height: 12px;
+                @media (max-width: 1399px) {
+                    width: 10px;
+                    height: 10px;
+                }
             }
             &.swiper-pagination-bullet-active-prev,
             &.swiper-pagination-bullet-active-next {

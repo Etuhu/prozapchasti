@@ -1,5 +1,11 @@
 .static-banner {
     margin-bottom: 160px;
+    @media (max-width: 1920px) {
+        margin-bottom: 100px;
+    }
+    @media (max-width: 1399px) {
+        margin-bottom: 50px;
+    }
     .static-banner-link {
         &:hover {
             .content .description .static-banner-button {
@@ -15,16 +21,49 @@
     .content {
         background-image: radial-gradient(90% 907.23% at 67.88% 38.51%, #EFFF8B 0%, #70DC8E 43.75%, #4D8AC4 100%);
         border-radius: 10px;
+        @media (max-width: 767px) {
+            background-image: radial-gradient(80% 947.23% at 87.88% 38.51%, #EFFF8B 0%, #70DC8E 53.75%, #4D8AC4 130%);
+        }
         .description {
             padding: 45px 63px;
             color: white;
             font-size: 1.35rem;
-
+            @media (max-width: 1920px) {
+                padding: 30px 50px;
+            }
+            @media (max-width: 1399px) {
+                padding: 25px 20px 25px 40px;
+            }
+            @media (max-width: 991px) {
+                padding: 20px 10px 20px 30px;
+            }
+            @media (max-width: 767px) {
+                padding: 20px 30px;
+            }
+            @media (max-width: 575px) {
+                font-size: 1.15rem;
+                padding: 15px 25px;
+            }
             .static-banner-title {
                 font-weight: 800;
                 font-size: 3.5rem;
                 line-height: 1.125;
                 text-transform: uppercase;
+                @media (max-width: 1920px) {
+                    font-size: 3rem;
+                }
+                @media (max-width: 1399px) {
+                    font-size: 2.7rem;
+                }
+                @media (max-width: 991px) {
+                    font-size: 2.2rem;
+                }
+                @media (max-width: 575px) {
+                    font-size: 2rem;
+                }
+                @media (max-width: 399px) {
+                    font-size: 1.7rem;
+                }
             }
             .static-banner-button {
                 width: fit-content;
@@ -36,6 +75,18 @@
                 padding: 12px 32px 13px;
                 margin-top: 30px;
                 transition: 0.2s ease;
+                @media (max-width: 1399px) {
+                    margin-top: 20px;
+                }
+                @media (max-width: 991px) {
+                    border-radius: 5px;
+                    font-size: 1.1rem;
+                    padding: 11px 25px 12px;
+                }
+                @media (max-width: 399px) {
+                    font-size: 1rem;
+                    padding: 8px 20px 9px;
+                }
             }
         }
         .pic {
@@ -43,9 +94,30 @@
             .pic-content {
                 overflow: hidden;
                 border-radius: 0px 222px;
+                height: 100%;
+                @media (max-width: 1699px) {
+                    border-radius: 0px 180px;
+                }
+                @media (max-width: 1499px) {
+                    border-radius: 0px 150px;
+                }
+                @media (max-width: 1199px) {
+                    border-radius: 0px 100px;
+                }
+                @media (max-width: 991px) {
+                    border-radius: 0px 80px;
+                }
+                @media (max-width: 767px) {
+                    border-radius: 0 0 10px 10px;
+                }
                 > img {
+                    height: 100%;
                     width: 100%;
+                    object-fit: cover;
                     transition: 0.7s ease;
+                    @media (min-width: 768px) and (max-width: 991px) {
+                        object-position: 55% 50%;
+                    }
                 }
             }
         }

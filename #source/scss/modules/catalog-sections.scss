@@ -1,8 +1,22 @@
 .catalog-sections {
     margin-bottom: 50px;
     .catalog-sections-wrapper {
+        &.row {
+            @media (max-width: 767px) {
+                margin-right: calc(var(--bs-gutter-x) * -.2);
+                margin-left: calc(var(--bs-gutter-x) * -.2);
+            }
+        }
         .catalog-sections-item {
             margin-bottom: 30px;
+            @media (max-width: 991px) {
+                margin-bottom: 22px;
+            }
+            @media (max-width: 767px) {
+                margin-bottom: 10px;
+                padding-right: calc(var(--bs-gutter-x) * .2);
+                padding-left: calc(var(--bs-gutter-x) * .2);
+            }
             .catalog-sections-item-link {
                 display: block;
                 width: 100%;
@@ -10,10 +24,19 @@
                 position: relative;
                 border-radius: 10px;
                 transition: 0.2s ease;
+                @media (max-width: 767px) {
+                    border-radius: 5px;
+                }
                 &:hover,
                 &:focus {
                     box-shadow: 0px 7px 20px 0px #cccccc;
                     transition: 0.2s ease;
+                    @media (max-width: 1920px) {
+                        box-shadow: 0px 5px 15px 0px #cccccc;
+                    }
+                    @media (max-width: 767px) {
+                        box-shadow: unset;
+                    }
                     .catalog-sections-item-title {
                         background-color: $violet;
                         transition: 0.2s ease;
@@ -22,12 +45,18 @@
                 .pic {
                     overflow: hidden;
                     border-radius: 10px;
+                    @media (max-width: 767px) {
+                        border-radius: 5px;
+                    }
                     > img {
                         width: 100%;
                         height: 100%;
                         object-fit: cover;
                         border-radius: 10px;
                         transition: 0.2s ease;
+                        @media (max-width: 767px) {
+                            border-radius: 5px;
+                        }
                     }
                 }
                 .catalog-sections-item-title {
@@ -43,6 +72,33 @@
                     left: 21px;
                     bottom: 26px;
                     transition: 0.2s ease;
+                    @media (max-width: 1920px) {
+                        left: 17px;
+                        bottom: 17px;
+                    }
+                    @media (max-width: 1599px) {
+                        padding: 5px 17px;
+                        font-size: 1.2rem;
+                    }
+                    @media (max-width: 1299px) {
+                        padding: 3px 15px 4px;
+                        font-size: 1.1rem;
+                    }
+                    @media (max-width: 991px) {
+                        padding: 2px 12px 2px;
+                        font-size: 1rem;
+                        border-radius: 5px;
+                        left: 12px;
+                        bottom: 12px;
+                    }
+                    @media (max-width: 575px) {
+                        padding: 0px 10px 0px;
+                        font-size: 0.85rem;
+                        border-radius: 3px;
+                        left: 10px;
+                        bottom: 10px;
+                        overflow: hidden;
+                    }
                 }
             }
         }

@@ -3,6 +3,12 @@
         .pic {
             border-radius: 10px;
             margin-bottom: 35px;
+            @media (max-width: 1920px) {
+                margin-bottom: 20px;
+            }
+            @media (max-width: 1199px) {
+                margin-bottom: 10px;
+            }
             > a {
                 display: block;
                 width: 100%;
@@ -50,6 +56,18 @@
                     font-weight: 800;
                     font-size: 2rem;
                     line-height: 1.25;
+                    @media (max-width: 1920px) {
+                        font-size: 1.8rem;
+                    }
+                    @media (max-width: 1599px) {
+                        font-size: 1.6rem;
+                    }
+                    @media (max-width: 575px) {
+                        font-size: 1.3rem;
+                    }
+                    @media (max-width: 399px) {
+                        font-size: 1.2rem;
+                    }
                     .currency {
                         font-weight: 700;
                     }
@@ -61,6 +79,19 @@
                         font-size: 1.35rem;
                         margin-left: 15px;
                         position: relative;
+                        @media (max-width: 1920px) {
+                            font-size: 1.25rem;
+                        }
+                        @media (max-width: 1599px) {
+                            font-size: 1.2rem;
+                            margin-left: 10px;
+                        }
+                        @media (max-width: 575px) {
+                            font-size: 1.1rem;
+                        }
+                        @media (max-width: 399px) {
+                            font-size: 1rem;
+                        }
                         .currency {
                             font-weight: 400;
                         }
@@ -80,6 +111,9 @@
             .name {
                 font-weight: 700;
                 font-size: 1rem;
+                @media (max-width: 1920px) {
+                    font-size: 0.9rem;
+                }
             }
         }
     }

@@ -1,6 +1,19 @@
 .sale-block {
     margin-bottom: 160px;
-    .title-wrapper {
-
+    @media (max-width: 1920px) {
+        margin-bottom: 100px;
+    }
+    @media (max-width: 1599px) {
+        margin-bottom: 50px;
+    }
+    @media (max-width: 767px) {
+        margin-bottom: 30px;
+    }
+    .swiper {
+        .swiper-pagination {
+            .swiper-pagination-bullet {
+                background-color: $violet;
+            }
+        }
     }
 }

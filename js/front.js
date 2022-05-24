@@ -112,8 +112,23 @@ const saleSwiper = new Swiper(".sale-swiper", {
 			slidesPerGroup: 6,
 			spaceBetween: 30,
 		},
+		1200: {
+			slidesPerView: 5,
+			slidesPerGroup: 5,
+			spaceBetween: 20,
+		},
+		992: {
+			slidesPerView: 4.3,
+			slidesPerGroup: 4,
+			spaceBetween: 20,
+		},
+		768: {
+			slidesPerView: 3.3,
+			slidesPerGroup: 3,
+			spaceBetween: 15,
+		},
 		300: {
-			slidesPerView: 2,
+			slidesPerView: 2.4,
 			slidesPerGroup: 2,
 			spaceBetween: 10,
 		},
@@ -146,8 +161,23 @@ const hitSwiper = new Swiper(".hit-swiper", {
 			slidesPerGroup: 6,
 			spaceBetween: 30,
 		},
+		1200: {
+			slidesPerView: 5,
+			slidesPerGroup: 5,
+			spaceBetween: 20,
+		},
+		992: {
+			slidesPerView: 4.3,
+			slidesPerGroup: 4,
+			spaceBetween: 20,
+		},
+		768: {
+			slidesPerView: 3.3,
+			slidesPerGroup: 3,
+			spaceBetween: 15,
+		},
 		300: {
-			slidesPerView: 2,
+			slidesPerView: 2.4,
 			slidesPerGroup: 2,
 			spaceBetween: 10,
 		},
