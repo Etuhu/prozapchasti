@@ -91,9 +91,9 @@ const saleSwiper = new Swiper(".sale-swiper", {
 	slidesPerGroup: 4,
 	speed: 700,
 	simulateTouch: true,
-	// autoplay: {
-	//     delay: 3000,
-	// },
+	autoplay: {
+	    delay: 3000,
+	},
 	spaceBetween: 30,
 	watchOverflow: true,
 	navigation: {
@@ -106,7 +106,6 @@ const saleSwiper = new Swiper(".sale-swiper", {
 		dynamicBullets: true,
 	},
 	breakpoints: {
-		// when window width is >= 1200px
 		1500: {
 			slidesPerView: 6,
 			slidesPerGroup: 6,
@@ -140,9 +139,9 @@ const hitSwiper = new Swiper(".hit-swiper", {
 	slidesPerGroup: 4,
 	speed: 800,
 	simulateTouch: true,
-	// autoplay: {
-	//     delay: 2500,
-	// },
+	autoplay: {
+	    delay: 3500,
+	},
 	spaceBetween: 30,
 	watchOverflow: true,
 	navigation: {
@@ -155,7 +154,6 @@ const hitSwiper = new Swiper(".hit-swiper", {
 		dynamicBullets: true,
 	},
 	breakpoints: {
-		// when window width is >= 1200px
 		1500: {
 			slidesPerView: 6,
 			slidesPerGroup: 6,
@@ -183,18 +181,3 @@ const hitSwiper = new Swiper(".hit-swiper", {
 		},
 	},
 });
-
-//Подключение кастомного скролла при ширине экрана больше 991 пикселя
-if ($(window).width() > 991) {
-	(function ($) {
-		$(window).on("load", function () {
-			$(".text-content-scroll").mCustomScrollbar({
-				theme: "dark",
-				scrollInertia: "300",
-				advanced: {
-					updateOnContentResize: "true",
-				},
-			});
-		});
-	})(jQuery);
-}
