@@ -9,31 +9,30 @@ let openMenuButton = document.querySelector(".navbar-toggler");
 let closeMenuButton = document.querySelector(".main-menu .close-btn");
 let headerMenuItems = document.querySelectorAll(".main-menu .navbar-nav .nav-link");
 
-
 let loginMenuHandler = function () {
-    loginModule.classList.toggle("show");
-    body.classList.toggle("fixed");
-}
+	loginModule.classList.toggle("show");
+	body.classList.toggle("fixed");
+};
 
 loginButton.addEventListener("click", function () {
-    loginMenuHandler();
+	loginMenuHandler();
 });
 
 loginCloseButton.addEventListener("click", function () {
-    loginMenuHandler();
+	loginMenuHandler();
 });
 
 let mainMenuHandler = function () {
-    mainMenu.classList.toggle("show");
-    body.classList.toggle("fixed");
-}
+	mainMenu.classList.toggle("show");
+	body.classList.toggle("fixed");
+};
 
 openMenuButton.addEventListener("click", function () {
-    mainMenuHandler();
+	mainMenuHandler();
 });
 
 closeMenuButton.addEventListener("click", function () {
-    mainMenuHandler();
+	mainMenuHandler();
 });
 
 bodyFader.addEventListener("click", function () {
@@ -45,10 +44,10 @@ bodyFader.addEventListener("click", function () {
 	}
 });
 
-headerMenuItems.forEach(function(headerMenuItem) {
-    headerMenuItem.addEventListener("click", function () {
+headerMenuItems.forEach(function (headerMenuItem) {
+	headerMenuItem.addEventListener("click", function () {
 		mainMenuHandler();
-    });
+	});
 });
 
 //Прилипающая шапка
@@ -92,7 +91,7 @@ const saleSwiper = new Swiper(".sale-swiper", {
 	speed: 700,
 	simulateTouch: true,
 	autoplay: {
-	    delay: 3000,
+		delay: 3000,
 	},
 	spaceBetween: 30,
 	watchOverflow: true,
@@ -140,7 +139,7 @@ const hitSwiper = new Swiper(".hit-swiper", {
 	speed: 800,
 	simulateTouch: true,
 	autoplay: {
-	    delay: 3500,
+		delay: 3500,
 	},
 	spaceBetween: 30,
 	watchOverflow: true,
@@ -180,4 +179,26 @@ const hitSwiper = new Swiper(".hit-swiper", {
 			spaceBetween: 10,
 		},
 	},
+});
+
+
+//Подсчет процента скидки в скидочных товырах
+document.addEventListener("DOMContentLoaded", function () {
+	var oldPrices = Array.from(document.querySelectorAll(".price--old"));
+
+	function getSalePercent(oldPrice) {
+		var oldPriceContent = oldPrice;
+		var newPriceContent = oldPriceContent.parentNode.querySelector(".price--new");
+		if (parseInt(oldPriceContent.innerHTML) > 0) {
+			var difference = parseInt(oldPriceContent.innerHTML) - parseInt(newPriceContent.innerHTML);
+			var salePercent = Math.round((difference * 100) / parseInt(oldPriceContent.innerHTML));
+			oldPrice.closest(".content").querySelector(".tag-percent").innerHTML = "-" + salePercent + "%";
+		} else {
+			oldPrice.closest(".content").querySelector(".tag-percent").innerHTML = "%";
+		}
+	}
+
+	if (oldPrices.length > 0) {
+		oldPrices.forEach(getSalePercent);
+	}
 });

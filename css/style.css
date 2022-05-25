@@ -1795,13 +1795,8 @@ a {
 
 .inner-page {
   flex-grow: 1;
-  padding-top: 80px;
+  padding-top: 20px;
   padding-bottom: 50px;
-}
-@media (max-width: 1920px) {
-  .inner-page {
-    padding-top: 50px;
-  }
 }
 
 .title-wrapper {
@@ -1940,35 +1935,57 @@ a {
 }
 
 ol.breadcrumb {
-  padding-top: 1rem;
+  padding-top: 15px;
+  padding-bottom: 25px;
+}
+@media (max-width: 1920px) {
+  ol.breadcrumb {
+    padding-bottom: 20px;
+  }
+}
+@media (max-width: 1199px) {
+  ol.breadcrumb {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 }
 ol.breadcrumb .breadcrumb-item {
-  line-height: 1.5;
-  font-size: 0.8rem;
+  line-height: 1.2;
+  font-size: 1rem;
+}
+@media (max-width: 575px) {
+  ol.breadcrumb .breadcrumb-item {
+    line-height: 1.5;
+  }
 }
 ol.breadcrumb .breadcrumb-item a {
-  font-size: 0.8rem;
-  line-height: 1.5;
-  color: #ababab;
-  font-weight: 300;
+  font-size: 0.78rem;
+  line-height: 2;
+  color: #6B6B6B;
+  font-weight: 400;
+  display: inline-block;
+  transition: 0.3s ease;
 }
-ol.breadcrumb .breadcrumb-item.active a {
-  font-size: 0.8rem;
-  color: #505050;
+ol.breadcrumb .breadcrumb-item a:hover {
+  color: #de0000;
+  transition: 0.3s ease;
+}
+ol.breadcrumb .breadcrumb-item.active {
+  font-size: 0.78rem;
+  line-height: 2;
+  color: #6B6B6B;
+  font-weight: 400;
 }
 ol.breadcrumb .breadcrumb-item + .breadcrumb-item {
-  padding-left: 0.4rem;
+  padding-left: 9px;
 }
 ol.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
   width: 5px;
   height: 5px;
-  content: url("../img/breadcrumb-arrow.svg");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding-right: 0.5rem;
-  font-size: 0.8rem;
-  line-height: 1.5;
+  content: url("../img/br-arrow.svg");
+  padding-right: 9px;
+  font-size: 0.78rem;
+  line-height: 2;
   float: unset;
 }
 
