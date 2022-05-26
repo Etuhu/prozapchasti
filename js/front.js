@@ -53,10 +53,12 @@ headerMenuItems.forEach(function (headerMenuItem) {
 //Прилипающая шапка
 let header = document.querySelector(".header");
 function onWindowScroll() {
-	if (window.pageYOffset > header.clientHeight) {
+	if (window.pageYOffset > header.clientHeight / 2) {
 		header.classList.add("fixed-top");
+		body.style.paddingTop = header.clientHeight * 2 + "px";
 	} else {
 		header.classList.remove("fixed-top");
+		body.style.paddingTop = 0;
 	}
 }
 window.addEventListener("scroll", onWindowScroll);

@@ -54,12 +54,10 @@
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
-			// @media (min-width: 1200px) and (max-width: 1499px) {
 
 			@media (min-width: 992px) and (max-width: 1920px) {
 				padding-right: 0;
 			}
-			// }
 			@media (max-width: 1199px) {
 				justify-content: flex-start;
 			}
@@ -263,7 +261,7 @@
 				border-top: 1px solid #D9D9D9;
 				justify-content: space-around;
 			}
-			@media (max-width: 1199px) {
+			@media (max-width: 575px) {
 				justify-content: space-between;
 			}
 			.user-button {
