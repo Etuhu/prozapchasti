@@ -3036,10 +3036,21 @@ main,
   top: 0;
   z-index: 20;
 }
+@media (max-width: 575px) {
+  .catalog-item .content .pic > a .tags {
+    padding: 5px;
+  }
+}
 .catalog-item .content .pic > a .tags > span {
   padding: 9px 11px 10px;
   margin-right: 10px;
   margin-bottom: 10px;
+}
+@media (max-width: 575px) {
+  .catalog-item .content .pic > a .tags > span {
+    padding: 5px 7px 6px;
+    font-size: 0.7rem;
+  }
 }
 .catalog-item .content .pic > a .tags > span:hover, .catalog-item .content .pic > a .tags > span:focus {
   opacity: 1;
