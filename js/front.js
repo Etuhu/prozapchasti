@@ -183,6 +183,133 @@ const hitSwiper = new Swiper(".hit-swiper", {
 	},
 });
 
+const relatedSwiper = new Swiper(".related-swiper", {
+	slidesPerView: 3,
+	slidesPerGroup: 2,
+	speed: 800,
+	simulateTouch: true,
+	autoplay: {
+		delay: 3500,
+	},
+	spaceBetween: 30,
+	watchOverflow: true,
+	navigation: {
+		nextEl: ".related-swiper-button-next",
+		prevEl: ".related-swiper-button-prev",
+	},
+	pagination: {
+		el: ".related-swiper-pagination",
+		clickable: true,
+		dynamicBullets: true,
+	},
+	breakpoints: {
+		1500: {
+			slidesPerView: 3,
+			slidesPerGroup: 2,
+			spaceBetween: 30,
+		},
+		1200: {
+			slidesPerView: 3,
+			slidesPerGroup: 2,
+			spaceBetween: 20,
+		},
+		992: {
+			slidesPerView: 2.5,
+			slidesPerGroup: 2,
+			spaceBetween: 20,
+		},
+		768: {
+			slidesPerView: 2,
+			slidesPerGroup: 2,
+			spaceBetween: 15,
+		},
+		300: {
+			slidesPerView: 1.5,
+			slidesPerGroup: 1,
+			spaceBetween: 10,
+		},
+	},
+});
+
+
+
+const sliderItemThumbs = new Swiper(".slider__thumbs--item .swiper", {
+	direction: "vertical",
+	slidesPerView: 4,
+	spaceBetween: 60,
+	navigation: {
+		nextEl: ".slider__thumbs--item__next",
+		prevEl: ".slider__thumbs--item__prev"
+	},
+	mousewheel: "true",
+	freeMode: "true",
+	breakpoints: {
+		0: {
+			direction: "horizontal",
+            spaceBetween: 5,
+            slidesPerView: 5,
+            mousewheel: "false",
+		},
+		575: {
+            spaceBetween: 10,
+            // slidesPerView: 5,
+            slidesPerView: 4.5,
+			direction: "horizontal",
+		},
+		768: {
+            spaceBetween: 15,
+            // slidesPerView: 5,
+            slidesPerView: 3.5,
+			direction: "vertical",
+		},
+        992: {
+            spaceBetween: 20,
+            slidesPerView: 3.5,
+			direction: "vertical",
+        },
+        1200: {
+            spaceBetween: 10,
+            slidesPerView: 3.7,
+        },
+        1500: {
+            spaceBetween: 10,
+            slidesPerView: 3.7,
+        },
+        1700: {
+            spaceBetween: 10,
+            slidesPerView: 3.5,
+        },
+        1921: {
+            spaceBetween: 15,
+            slidesPerView: 3.4,
+        }
+	}
+});
+
+
+const sliderItemImages = new Swiper('.slider__images--item .swiper', {
+	direction: "vertical",
+	slidesPerView: 1,
+	spaceBetween: 20,
+	mousewheel: false,
+	navigation: {
+		nextEl: ".slider__next",
+		prevEl: ".slider__prev"
+	},
+	grabCursor: true,
+	thumbs: {
+		swiper: sliderItemThumbs,
+	},
+	breakpoints: {
+		0: {
+			direction: "horizontal",
+		},
+		768: {
+			direction: "vertical",
+		}
+	}
+});
+
 
 //Подсчет процента скидки в скидочных товырах
 document.addEventListener("DOMContentLoaded", function () {

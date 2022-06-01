@@ -1,0 +1,16 @@
+.catalog-item-page {
+    .item-view {
+        .catalog-item-pictures {
+            .slider__flex {
+                height: 600px;
+                display: flex;
+                .slider__col {
+                    width: 30%;
+                }
+                .slider__images--item {
+                    width: 70%;
+                }
+            }
+        }
+    }
+}
