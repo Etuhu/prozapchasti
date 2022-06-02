@@ -4,8 +4,8 @@
 	left: 0;
 	bottom: 0;
 	z-index: 1050;
-    width: 30%;
-    min-height: 100%;
+	width: 30%;
+	min-height: 100%;
 	transform: translateX(-100%);
 	transition: 0.3s ease;
 	background-color: white;
@@ -99,7 +99,7 @@
 		}
 
 		&::-webkit-scrollbar-track {
-			background-color: #E6E9F0;
+			background-color: #e6e9f0;
 			border: 2px solid white;
 			@media (max-width: 1499px) {
 				border: 0.5px solid white;
@@ -114,14 +114,14 @@
 			border-radius: 10px;
 		}
 		&::-webkit-scrollbar-thumb:hover {
-			background-color: #FF0000;
+			background-color: $red-light;
 			cursor: pointer;
 		}
 		&::-webkit-scrollbar-thumb:focus {
-			background-color: #FF0000;
+			background-color: $red-light;
 		}
-		scrollbar-color: $red #E6E9F0;
-    	scrollbar-width: thin;
+		scrollbar-color: $red #e6e9f0;
+		scrollbar-width: thin;
 	}
 	.navbar {
 		.nav-item {
@@ -170,7 +170,7 @@
 			left: 56px;
 			bottom: 0;
 			height: 2px;
-			background-color: #E6E9F0;
+			background-color: #e6e9f0;
 			content: "";
 			@media (max-width: 1920px) {
 				left: 51px;

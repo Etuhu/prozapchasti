@@ -89,7 +89,7 @@ const promoSwiper = new Swiper(".promo-swiper", {
 
 const saleSwiper = new Swiper(".sale-swiper", {
 	slidesPerView: 6,
-	slidesPerGroup: 4,
+	slidesPerGroup: 3,
 	speed: 700,
 	simulateTouch: true,
 	autoplay: {
@@ -109,27 +109,27 @@ const saleSwiper = new Swiper(".sale-swiper", {
 	breakpoints: {
 		1500: {
 			slidesPerView: 6,
-			slidesPerGroup: 6,
+			slidesPerGroup: 3,
 			spaceBetween: 30,
 		},
 		1200: {
 			slidesPerView: 5,
-			slidesPerGroup: 5,
+			slidesPerGroup: 3,
 			spaceBetween: 20,
 		},
 		992: {
 			slidesPerView: 4.3,
-			slidesPerGroup: 4,
+			slidesPerGroup: 2,
 			spaceBetween: 20,
 		},
 		768: {
 			slidesPerView: 3.3,
-			slidesPerGroup: 3,
+			slidesPerGroup: 2,
 			spaceBetween: 15,
 		},
 		300: {
 			slidesPerView: 2.4,
-			slidesPerGroup: 2,
+			slidesPerGroup: 1,
 			spaceBetween: 10,
 		},
 	},
@@ -137,7 +137,7 @@ const saleSwiper = new Swiper(".sale-swiper", {
 
 const hitSwiper = new Swiper(".hit-swiper", {
 	slidesPerView: 6,
-	slidesPerGroup: 4,
+	slidesPerGroup: 3,
 	speed: 800,
 	simulateTouch: true,
 	autoplay: {
@@ -157,40 +157,37 @@ const hitSwiper = new Swiper(".hit-swiper", {
 	breakpoints: {
 		1500: {
 			slidesPerView: 6,
-			slidesPerGroup: 6,
+			slidesPerGroup: 3,
 			spaceBetween: 30,
 		},
 		1200: {
 			slidesPerView: 5,
-			slidesPerGroup: 5,
+			slidesPerGroup: 3,
 			spaceBetween: 20,
 		},
 		992: {
 			slidesPerView: 4.3,
-			slidesPerGroup: 4,
+			slidesPerGroup: 2,
 			spaceBetween: 20,
 		},
 		768: {
 			slidesPerView: 3.3,
-			slidesPerGroup: 3,
+			slidesPerGroup: 2,
 			spaceBetween: 15,
 		},
 		300: {
 			slidesPerView: 2.4,
-			slidesPerGroup: 2,
+			slidesPerGroup: 1,
 			spaceBetween: 10,
 		},
 	},
 });
 
 const relatedSwiper = new Swiper(".related-swiper", {
-	slidesPerView: 3,
-	slidesPerGroup: 2,
+	slidesPerView: 6,
+	slidesPerGroup: 3,
 	speed: 800,
 	simulateTouch: true,
-	autoplay: {
-		delay: 3500,
-	},
 	spaceBetween: 30,
 	watchOverflow: true,
 	navigation: {
@@ -204,27 +201,27 @@ const relatedSwiper = new Swiper(".related-swiper", {
 	},
 	breakpoints: {
 		1500: {
-			slidesPerView: 3,
-			slidesPerGroup: 2,
+			slidesPerView: 6,
+			slidesPerGroup: 3,
 			spaceBetween: 30,
 		},
 		1200: {
-			slidesPerView: 3,
-			slidesPerGroup: 2,
+			slidesPerView: 5,
+			slidesPerGroup: 3,
 			spaceBetween: 20,
 		},
 		992: {
-			slidesPerView: 2.5,
+			slidesPerView: 4.3,
 			slidesPerGroup: 2,
 			spaceBetween: 20,
 		},
 		768: {
-			slidesPerView: 2,
+			slidesPerView: 3.3,
 			slidesPerGroup: 2,
 			spaceBetween: 15,
 		},
 		300: {
-			slidesPerView: 1.5,
+			slidesPerView: 2.4,
 			slidesPerGroup: 1,
 			spaceBetween: 10,
 		},
@@ -277,11 +274,11 @@ const sliderItemThumbs = new Swiper(".slider__thumbs--item .swiper", {
         },
         1700: {
             spaceBetween: 10,
-            slidesPerView: 3.5,
+            slidesPerView: 4,
         },
         1921: {
             spaceBetween: 15,
-            slidesPerView: 3.4,
+            slidesPerView: 5,
         }
 	}
 });
@@ -330,4 +327,22 @@ document.addEventListener("DOMContentLoaded", function () {
 	if (oldPrices.length > 0) {
 		oldPrices.forEach(getSalePercent);
 	}
+});
+
+//Сворачивание-оазворачивание списка характеристик на странице товара
+
+var collapseBtn = document.querySelector(".parameters-collapse-button");
+var parametersList = document.querySelector(".parameters .parameters-wrapper");
+
+let parametersCollapse = function () {
+	parametersList.classList.toggle("max");
+	if (!parametersList.classList.contains("max")) {
+		collapseBtn.innerHTML = "Развернуть характеристики";
+	} else {
+		collapseBtn.innerHTML = "Свернуть характеристики";
+	}
+};
+
+collapseBtn.addEventListener("click", function () {
+	parametersCollapse();
 });

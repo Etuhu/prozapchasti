@@ -1,115 +1,115 @@
 form {
-    .form-group {
-        margin-bottom: 30px;
-        @media (max-width: 1920px) {
-            margin-bottom: 25px;
-        }
-        @media (max-width: 1499px) {
-            margin-bottom: 20px;
-        }
+	.form-group {
+		margin-bottom: 30px;
+		@media (max-width: 1920px) {
+			margin-bottom: 25px;
+		}
+		@media (max-width: 1499px) {
+			margin-bottom: 20px;
+		}
 		@media (max-width: 991px) {
-            margin-bottom: 15px;
-        }
-    }
-    label {
-        font-size: 0.9rem;
-        line-height: 2;
-        color: #6B6B6B;
-        margin-bottom: 15px;
-        @media (max-width: 1920px) {
-            margin-bottom: 10px;
-        }
-        @media (max-width: 1499px) {
-            margin-bottom: 7px;
-        }
-    }
-    input[type=text],
-    input[type=email],
-    input[type=number],
-    input[type=password],
-    select,
-    textarea {
-        border: 1px solid #C4C4C4;
-        border-radius: 10px;
-        padding: 10px 10px 10px 17px;
-        font-weight: 700;
-        font-size: 1.35rem;
-        line-height: 1.25;
-        transition: 0.2s ease;
-        @media (max-width: 1399px) {
-            padding: 8px 8px 8px 12px;
-            font-size: 1.2rem;
-        }
-        @media (max-width: 1199px) {
-            border-radius: 7px;
-        }
-        &:hover,
-        &:focus {
-            border: 1px solid $red;
-            transition: 0.2s ease;
-            box-shadow: unset;
-        }
-    }
-    input[type=checkbox] {
-        -webkit-appearance: none;
-	    -moz-appearance: none;
-        width: 23px;
-        height: 23px;
-        border: 1px solid #C4C4C4;
-        border-radius: 3px;
-        box-shadow: unset;
-        @media (max-width: 991px) {
-            width: 20px;
-            height: 20px;
-        }
-        &:hover,
-        &:focus {
-            border: 1px solid $red;
-            transition: 0.2s ease;
-            box-shadow: unset;
-            outline: none;
-        }
-        &:checked {
-            background-color: $red;
-            border: none;
-        }
-        + label {
-            margin-left: 10px;
-        }
-    }
-    button[type=submit] {
-        color: white;
-        background-color: $red;
-        border: unset;
-        border-radius: 10px;
-        padding: 13px 10px;
-        font-weight: 700;
-        font-size: 1.35rem;
-        line-height: 1;
-        width: 68%;
-        @media (max-width: 1399px) {
-            padding: 11px 10px;
-            font-size: 1.2rem;
-            width: 60%;
-        }
-        @media (max-width: 1199px) {
-            border-radius: 7px;
-        }
-        @media (max-width: 991px) {
-            width: 55%;
-        }
-        &:hover,
-        &:focus {
-            background-color: #FF0000;
-            box-shadow: unset;
-        }
-        &:active {
-            border: unset;
-            background-color: $red;
-            &:hover,
-            &:focus {
-                box-shadow: unset;
-            }
-        }
-    }
+			margin-bottom: 15px;
+		}
+	}
+	label {
+		font-size: 0.9rem;
+		line-height: 2;
+		color: #6b6b6b;
+		margin-bottom: 15px;
+		@media (max-width: 1920px) {
+			margin-bottom: 10px;
+		}
+		@media (max-width: 1499px) {
+			margin-bottom: 7px;
+		}
+	}
+	input[type="text"],
+	input[type="email"],
+	input[type="number"],
+	input[type="password"],
+	select,
+	textarea {
+		border: 1px solid #c4c4c4;
+		border-radius: 10px;
+		padding: 10px 10px 10px 17px;
+		font-weight: 700;
+		font-size: 1.35rem;
+		line-height: 1.25;
+		transition: 0.2s ease;
+		@media (max-width: 1399px) {
+			padding: 8px 8px 8px 12px;
+			font-size: 1.2rem;
+		}
+		@media (max-width: 1199px) {
+			border-radius: 7px;
+		}
+		&:hover,
+		&:focus {
+			border: 1px solid $red;
+			transition: 0.2s ease;
+			box-shadow: unset;
+		}
+	}
+	input[type="checkbox"] {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		width: 23px;
+		height: 23px;
+		border: 1px solid #c4c4c4;
+		border-radius: 3px;
+		box-shadow: unset;
+		@media (max-width: 991px) {
+			width: 20px;
+			height: 20px;
+		}
+		&:hover,
+		&:focus {
+			border: 1px solid $red;
+			transition: 0.2s ease;
+			box-shadow: unset;
+			outline: none;
+		}
+		&:checked {
+			background-color: $red;
+			border: none;
+		}
+		+ label {
+			margin-left: 10px;
+		}
+	}
+	button[type="submit"] {
+		color: white;
+		background-color: $red;
+		border: unset;
+		border-radius: 10px;
+		padding: 13px 10px;
+		font-weight: 700;
+		font-size: 1.35rem;
+		line-height: 1;
+		width: 68%;
+		@media (max-width: 1399px) {
+			padding: 11px 10px;
+			font-size: 1.2rem;
+			width: 60%;
+		}
+		@media (max-width: 1199px) {
+			border-radius: 7px;
+		}
+		@media (max-width: 991px) {
+			width: 55%;
+		}
+		&:hover,
+		&:focus {
+			background-color: $red-light;
+			box-shadow: unset;
+		}
+		&:active {
+			border: unset;
+			background-color: $red;
+			&:hover,
+			&:focus {
+				box-shadow: unset;
+			}
+		}
+	}
 }
