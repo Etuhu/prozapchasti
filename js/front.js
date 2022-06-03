@@ -231,7 +231,6 @@ const relatedSwiper = new Swiper(".related-swiper", {
 
 
 const sliderItemThumbs = new Swiper(".slider__thumbs--item .swiper", {
-	direction: "vertical",
 	slidesPerView: 4,
 	spaceBetween: 60,
 	navigation: {
@@ -244,50 +243,50 @@ const sliderItemThumbs = new Swiper(".slider__thumbs--item .swiper", {
 		0: {
 			direction: "horizontal",
             spaceBetween: 5,
-            slidesPerView: 5,
+            slidesPerView: 4.5,
             mousewheel: "false",
 		},
 		575: {
-            spaceBetween: 10,
+            spaceBetween: 5,
             // slidesPerView: 5,
-            slidesPerView: 4.5,
-			direction: "horizontal",
+            slidesPerView: 5,
 		},
 		768: {
-            spaceBetween: 15,
+            spaceBetween: 5,
             // slidesPerView: 5,
-            slidesPerView: 3.5,
-			direction: "vertical",
+            slidesPerView: 5.5,
 		},
         992: {
-            spaceBetween: 20,
-            slidesPerView: 3.5,
-			direction: "vertical",
+            spaceBetween: 5,
+            slidesPerView: 4.5,
         },
         1200: {
-            spaceBetween: 10,
-            slidesPerView: 3.7,
+            spaceBetween: 5,
+            slidesPerView: 5.5,
+			direction: "horizontal",
         },
-        1500: {
-            spaceBetween: 10,
-            slidesPerView: 3.7,
+        1400: {
+            spaceBetween: 5,
+            slidesPerView: 5,
+			direction: "vertical",
         },
         1700: {
-            spaceBetween: 10,
-            slidesPerView: 4,
+            spaceBetween: 5,
+            slidesPerView: 5,
+			direction: "vertical",
         },
         1921: {
-            spaceBetween: 15,
+            spaceBetween: 5,
             slidesPerView: 5,
+			direction: "vertical",
         }
 	}
 });
 
 
 const sliderItemImages = new Swiper('.slider__images--item .swiper', {
-	direction: "vertical",
 	slidesPerView: 1,
-	spaceBetween: 20,
+	spaceBetween: 10,
 	mousewheel: false,
 	navigation: {
 		nextEl: ".slider__next",
@@ -301,14 +300,14 @@ const sliderItemImages = new Swiper('.slider__images--item .swiper', {
 		0: {
 			direction: "horizontal",
 		},
-		768: {
+		1400: {
 			direction: "vertical",
 		}
 	}
 });
 
 
-//Подсчет процента скидки в скидочных товырах
+//Подсчет процента скидки в скидочных товарах
 document.addEventListener("DOMContentLoaded", function () {
 	var oldPrices = Array.from(document.querySelectorAll(".price--old"));
 
@@ -330,7 +329,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //Сворачивание-оазворачивание списка характеристик на странице товара
-
 var collapseBtn = document.querySelector(".parameters-collapse-button");
 var parametersList = document.querySelector(".parameters .parameters-wrapper");
 
