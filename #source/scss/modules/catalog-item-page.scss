@@ -109,12 +109,99 @@
 						flex-direction: column-reverse;
 					}
 					.slider__col {
+						position: relative;
 						@media (min-width: 1400px) {
 							width: 16.66%;
 							margin-bottom: -17px;
 						}
 						@media (max-width: 1399px) {
 							margin-top: 10px;
+						}
+						.slider__thumbs--item__prev,
+						.slider__thumbs--item__next {
+							width: 75%;
+							height: 50px;
+							position: absolute;
+							z-index: 10;
+							background-image: linear-gradient(0deg, rgba(255, 255, 255, 1) 30%, rgba(255, 255, 255, 0) 100%);
+							display: flex;
+							justify-content: center;
+							opacity: 1;
+							pointer-events: all;
+							transition: 0.2s ease;
+							@media (max-width: 1699px) {
+								width: 90%;
+							}
+							@media (max-width: 1399px) {
+								// max-height: calc(25% - 5px) !important;
+								height: 100%;
+								width: 25px;
+								top: 0;
+								background-image: linear-gradient(-90deg, rgba(255, 255, 255, 1) 30%, rgba(255, 255, 255, 0) 100%);
+								@media (max-width: 1399px) {
+									display: flex;
+									align-items: center;
+								}
+							}
+							&.swiper-button-disabled {
+								opacity: 0;
+								z-index: -1;
+								pointer-events: none;
+								transition: 0.2s ease;
+							}
+							&::after {
+								width: 20px;
+								height: 20px;
+								font-family: "Font Awesome 5 Free";
+								font-weight: 900;
+								color: black;
+								text-align: center;
+								@media (max-width: 1399px) {
+									width: 15px;
+									height: 15px;
+								}
+							}
+						}
+						.slider__thumbs--item__prev {
+							top: -25px;
+							left: 0;
+							align-items: flex-end;
+							background-image: linear-gradient(180deg, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+							@media (max-width: 1399px) {
+								align-items: center;
+								justify-content: flex-start;
+							}
+							&::after {
+								content: "\f106";
+								@media (max-width: 1399px) {
+									content: "\f104";
+								}
+							}
+							@media (max-width: 1399px) {
+								left: 0;
+								top: 0;
+								background-image: linear-gradient(90deg, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+							}
+						}
+						.slider__thumbs--item__next {
+							bottom: 10px;
+							left: 0;
+							align-items: center;
+							@media (max-width: 1399px) {
+								align-items: center;
+								justify-content: flex-end;
+							}
+							&::after {
+								content: "\f107";
+								@media (max-width: 1399px) {
+									content: "\f105";
+								}
+							}
+							@media (max-width: 1399px) {
+								right: 0;
+								top: 0;
+								left: unset;
+							}
 						}
 						.slider__thumbs--item {
 							height: 100%;
@@ -738,6 +825,15 @@
 						}
 					}
 				}
+				.feeback-buttons {
+					display: flex;
+					align-items: center;
+					flex-wrap: wrap;
+					@media (max-width: 575px) {
+						flex-direction: column;
+						align-items: flex-start;
+					}
+				}
 				.feedback-collapse-button {
 					background-color: rgba(255, 255, 255, 0);
 					border: unset;
@@ -746,11 +842,48 @@
 					border-bottom: 2px dotted $red;
 					padding: 0 0 5px 0;
 					transition: 0.2s ease;
+					@media (max-width: 575px) {
+						margin-bottom: 12px;
+						padding-bottom: 3px;
+					}
 					&:hover,
 					&:focus {
 						color: $red-light;
 						transition: 0.2s ease;
 						border-bottom: 2px dotted $red-light;
+					}
+				}
+				.add-feedback-button {
+					color: white;
+					background-color: $red;
+					border: unset;
+					border-radius: 10px;
+					font-weight: 500;
+					font-size: 1.15rem;
+					line-height: 1;
+					padding: 10px 25px 12px;
+					@media (max-width: 1599px) {
+						border-radius: 7px;
+						font-size: 1.05rem;
+						padding: 9px 20px 10px;
+					}
+					@media (max-width: 575px) {
+						border-radius: 5px;
+					}
+					@media (max-width: 499px) {
+						font-size: 0.9rem;
+						padding: 8px 15px 9px;
+					}
+					&:hover,
+					&:focus {
+						background-color: $red-light;
+						transition: 0.2s ease;
+					}
+				}
+				.feedback-collapse-button + .add-feedback-button {
+					margin-left: 20px;
+					@media (max-width: 575px) {
+						margin-left: 0;
 					}
 				}
 			}
