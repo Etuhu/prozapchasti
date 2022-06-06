@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>ПРОзапчасти.РФ | Корзина</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="theme-color" content="#E6E9F0" />
+		<link href="img/favicon.ico" rel="shortcut icon" />
+		<link href="css/bootstrap.min.css" media="screen" rel="stylesheet" type="text/css" />
+		<link href="css/all.min.css" media="screen" rel="stylesheet" type="text/css" />
+		<link href="css/animate.css" media="screen" rel="stylesheet" type="text/css" />
+		<link href="css/jquery.mCustomScrollbar.min.css" media="screen" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="css/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="css/fancybox.css" />
+		<link href="css/style.css" media="screen" rel="stylesheet" type="text/css" />
+		<link href="css/style.css.map" media="screen" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<div id="pre-loader" class="pre-loader" style="opacity: 0; display: none"></div>
+		<div class="fader"></div>
+		<div class="login-wrapper">
+			<button type="button" class="close-btn">
+				<svg width="50" height="50" viewbox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M1.00012 1L43.073 43.0729" stroke="currentColor" />
+					<path d="M43.0729 1L1.00002 43.0729" stroke="currentColor" />
+				</svg>
+			</button>
+			<div class="login-form-block">
+				<h2 class="basic-title">Войти или создать профиль</h2>
+				<form method="post" action="/user/login" role="form" class="login-form">
+					<div class="form-group">
+						<label for="username">E-mail</label>
+						<input type="email" name="username" required="required" class="form-control" value="" />
+					</div>
+					<div class="form-group">
+						<label for="password">Пароль</label>
+						<input type="password" name="password" required="required" class="form-control" value="" />
+					</div>
+					<div class="form-group">
+						<div class="form-check">
+							<input type="hidden" name="remember" value="0" />
+							<input type="checkbox" name="remember" class="form-check-input" value="1" />
+							<label class="form-check-label" for="remember">Запомнить меня</label>
+						</div>
+					</div>
+					<input type="hidden" name="redirect" value="" />
+					<div class="form-group">
+						<button type="submit" name="submit" class="btn btn-secondary" value="">Войти</button>
+					</div>
+				</form>
+				<div class="login-form-footer">
+					<a href="/user/register">Регистрация</a>
+					<a href="/user/lostpassword">Забыли пароль?</a>
+				</div>
+			</div>
+		</div>
+		<div class="main-menu">
+			<button type="button" class="close-btn">
+				<svg width="50" height="50" viewbox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M1.00012 1L43.073 43.0729" stroke="currentColor" />
+					<path d="M43.0729 1L1.00002 43.0729" stroke="currentColor" />
+				</svg>
+			</button>
+			<div class="menu">
+				<div class="navbar-wrapper">
+					<nav class="navbar navbar--categories">
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a href="#" class="nav-link">
+									<img src="img/disp-icon.svg" class="img-fluid" width="36" />
+									Дисплеи
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link">
+									<img src="img/accum-icon.svg" class="img-fluid" width="36" />
+									Аккумуляторы
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link">
+									<img src="img/schl-icon.svg" class="img-fluid" width="36" />
+									Шлейфы
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link">
+									<img src="img/camer-icon.svg" class="img-fluid" width="36" />
+									Камеры
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link">
+									<img src="img/glasses-icon.svg" class="img-fluid" width="36" />
+									Защитные стекла
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link">
+									<img src="img/corp-icon.svg" class="img-fluid" width="36" />
+									Корпусы
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link">
+									<img src="img/access-icon.svg" class="img-fluid" width="36" />
+									Аксессуары
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link">
+									<img src="img/other-icon.svg" class="img-fluid" width="36" />
+									Прочее
+								</a>
+							</li>
+						</ul>
+					</nav>
+					<nav class="navbar navbar--menu" role="navigation">
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a href="#" class="nav-link">О нас</a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link">Каталог</a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link">Покупателям</a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link">Сервис</a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link">Новости</a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link">Контакты</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+		<div class="header header--index">
+			<div class="header-top-row">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-4 col-xxl-3 header-top-slogan">Бесплатная доставка по России</div>
+						<div class="col-lg-8 col-xxl-9 header-top-buttons">
+							<a href="#" class="basic-button basic-button--violet">Распродажа</a>
+							<a href="#" class="basic-button basic-button--red">Новинки</a>
+							<a href="#" class="basic-button basic-button--green">Предзаказ</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="header-bottom-row">
+				<div class="container">
+					<div class="row">
+						<div class="logo-wrapper col-md-5 col-lg-4 col-xl-3">
+							<div class="menu-button-wrapper">
+								<button class="navbar-toggler navbar-toggler show" type="button">
+									<span class="navbar-toggler-icon">
+										<span></span>
+										<span></span>
+										<span></span>
+									</span>
+								</button>
+							</div>
+							<a href="/" class="logo-link">
+								<img src="img/logo.svg" class="img-fluid logo" width="302" />
+							</a>
+							<button type="button" class="search-button" data-bs-toggle="collapse" href="#searchLine" role="button" aria-expanded="false" aria-controls="searchLine">
+								<svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										fill-rule="evenodd"
+										clip-rule="evenodd"
+										d="M7.5 0.5C3.36616 0.5 0 3.86616 0 8C0 12.1338 3.36616 15.5 7.5 15.5C9.13529 15.5 10.6493 14.9715 11.8825 14.0794L15.7484 17.9453C15.8581 18.0586 15.9892 18.1491 16.134 18.2117C16.2805 18.275 16.4382 18.3085 16.5979 18.3101C16.7575 18.3117 16.9159 18.2815 17.0637 18.2211C17.2115 18.1608 17.3458 18.0715 17.4587 17.9587C17.5715 17.8458 17.6608 17.7115 17.7211 17.5637C17.7815 17.4159 17.8117 17.2575 17.8101 17.0979C17.8085 16.9382 17.775 16.7805 17.7117 16.634C17.6491 16.4892 17.5586 16.3581 17.4453 16.2484L13.5794 12.3825C14.4715 11.1493 15 9.63529 15 8C15 3.86616 11.6338 0.5 7.5 0.5ZM2.4 8C2.4 5.17506 4.67506 2.9 7.5 2.9C10.3249 2.9 12.6 5.17506 12.6 8C12.6 10.8249 10.3249 13.1 7.5 13.1C4.67506 13.1 2.4 10.8249 2.4 8Z"
+										fill="currentColor"
+									/>
+								</svg>
+							</button>
+						</div>
+						<div class="col-md-7 col-lg-8 col-xl-6 col-xxl-7 search-wrapper collapse" id="searchLine">
+							<div id="searchWidget">
+								<form action="#">
+									<div class="input-group">
+										<input type="text" name="query" class="form-control" placeholder="Поиск в каталоге запчастей и комплектующих" />
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="col-xl-3 col-xxl-2 user-buttons">
+							<a href="#" class="user-button user-button--home">
+								<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M1 9.39245C1 9.10553 1.12324 8.83244 1.33838 8.64261L9.33838 1.58378C9.7164 1.25023 10.2836 1.25023 10.6616 1.58378L18.6616 8.64261C18.8768 8.83244 19 9.10553 19 9.39245V18C19 18.5523 18.5523 19 18 19H2C1.44772 19 1 18.5523 1 18V9.39245Z" stroke="currentColor" stroke-width="2" />
+								</svg>
+								<span>Главная</span>
+							</a>
+							<a href="#" class="user-button user-button--catalog">
+								<svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										fill-rule="evenodd"
+										clip-rule="evenodd"
+										d="M5.53703 12C5.836 12 5.98573 12.3615 5.77432 12.5729C5.53568 12.8069 5.34468 13.0852 5.21199 13.3922C5.06672 13.7283 4.76504 14 4.39888 14H1C0.447715 14 0 13.5523 0 13C0 12.4477 0.447715 12 1 12H5.53703ZM6.55269 6C6.99695 6 7.34037 6.38555 7.34037 6.82981C7.34037 7.44799 6.87163 8 6.25344 8H1C0.447715 8 0 7.55228 0 7C0 6.44772 0.447715 6 1 6H6.55269ZM9.23305 1.73057C9.0893 1.8977 8.88277 2 8.66232 2H1C0.447715 2 0 1.55228 0 1C0 0.447715 0.447715 0 1 0H8.60089C9.3403 0 9.7152 1.16998 9.23305 1.73057Z"
+										fill="currentColor"
+									/>
+									<path
+										fill-rule="evenodd"
+										clip-rule="evenodd"
+										d="M21.5 6.82981C21.5 3.34086 18.6591 0.5 15.1702 0.5C11.6812 0.5 8.84038 3.34086 8.84038 6.82981C8.84038 8.18453 9.27015 9.44064 9.99786 10.4707L6.82872 13.6398C6.72677 13.7388 6.64527 13.8568 6.58889 13.9873C6.53172 14.1195 6.50152 14.2619 6.50006 14.4059C6.49859 14.55 6.52589 14.6929 6.58035 14.8263C6.63481 14.9597 6.71533 15.0809 6.81722 15.1828C6.9191 15.2847 7.04028 15.3652 7.17368 15.4197C7.30706 15.4741 7.44998 15.5014 7.59406 15.4999C7.73814 15.4985 7.88047 15.4683 8.01273 15.4111C8.14318 15.3547 8.26125 15.2732 8.3602 15.1713L11.5293 12.0021C12.5594 12.7299 13.8155 13.1596 15.1702 13.1596C18.6591 13.1596 21.5 10.3188 21.5 6.82981ZM15.1702 2.66596C17.4767 2.66596 19.334 4.52328 19.334 6.82981C19.334 9.13635 17.4767 10.9937 15.1702 10.9937C12.8637 10.9937 11.0063 9.13635 11.0063 6.82981C11.0063 4.52328 12.8637 2.66596 15.1702 2.66596Z"
+										fill="currentColor"
+									/>
+								</svg>
+								<span>Каталог</span>
+							</a>
+							<a href="#" class="user-button user-button--cart">
+								<svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M2.21845 8.94141L2.21845 8.94141L3.82078 17H16.1793L17.7816 8.94141H2.21845ZM0.256847 9.33144C0.0108954 8.09448 0.957265 6.94141 2.21845 6.94141H17.7816C19.0428 6.94141 19.9892 8.09448 19.7432 9.33144L18.1409 17.39C17.9548 18.3259 17.1335 19 16.1793 19H3.82078C2.86657 19 2.04526 18.3259 1.85918 17.39L0.256847 9.33144Z" fill="currentColor" />
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M12.8356 4.01811C13.0163 4.54 13.4477 5 14 5C14.5523 5 15.0104 4.54777 14.9013 4.00638C14.4405 1.72096 12.4212 0 9.99999 0C7.57878 0 5.55952 1.72096 5.09872 4.00638C4.98956 4.54777 5.44771 5 5.99999 5C6.55228 5 6.98368 4.54 7.16437 4.01811C7.57105 2.84347 8.68702 2 9.99999 2C11.313 2 12.4289 2.84347 12.8356 4.01811Z" fill="currentColor" />
+								</svg>
+								<div class="cart-counter">5</div>
+								<span>Корзина</span>
+							</a>
+							<a href="#" class="user-button user-button--hearth">
+								<svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										fill-rule="evenodd"
+										clip-rule="evenodd"
+										d="M10 14.7329L15.083 10.7795C16.8608 9.39676 17.7927 7.18974 17.544 4.95124C17.2015 1.86849 13.0536 1.1287 11.6665 3.90297L11.2512 4.7336C10.7357 5.76459 9.26439 5.76458 8.7489 4.7336L8.33357 3.90295C6.94643 1.12868 2.79854 1.86846 2.45601 4.95121C2.20728 7.18973 3.13922 9.39676 4.91708 10.7795L10 14.7329ZM11.1987 16.3343C10.4937 16.8827 9.50637 16.8827 8.80131 16.3343L3.6892 12.3582C1.3624 10.5485 0.142716 7.66004 0.46824 4.73035C1.02112 -0.245542 7.60988 -1.50511 10 2.77696C12.3902 -1.50508 18.9789 -0.245506 19.5318 4.73037C19.8573 7.66006 18.6376 10.5485 16.3108 12.3582L11.1987 16.3343Z"
+										fill="currentColor"
+									/>
+								</svg>
+								<span>Избранное</span>
+							</a>
+							<a href="javascript:void(0)" class="user-button" id="loginBtn">
+								<svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M9 8C10.6569 8 12 6.65685 12 5C12 3.34315 10.6569 2 9 2C7.34315 2 6 3.34315 6 5C6 6.65685 7.34315 8 9 8ZM9 10C11.7614 10 14 7.76142 14 5C14 2.23858 11.7614 0 9 0C6.23858 0 4 2.23858 4 5C4 7.76142 6.23858 10 9 10Z" fill="currentColor" />
+									<path
+										fill-rule="evenodd"
+										clip-rule="evenodd"
+										d="M4.82348 13.9442C3.81362 14.6511 2.90458 15.9312 1.9285 18.3714C1.72339 18.8842 1.14141 19.1336 0.628631 18.9285C0.115848 18.7234 -0.133568 18.1414 0.0715452 17.6286C1.09546 15.0688 2.18642 13.3489 3.67656 12.3058C5.18191 11.252 6.93633 11 9.00002 11C11.0637 11 12.8181 11.252 14.3235 12.3058C15.8136 13.3489 16.9046 15.0688 17.9285 17.6286C18.1336 18.1414 17.8842 18.7234 17.3714 18.9285C16.8586 19.1336 16.2767 18.8842 16.0715 18.3714C15.0955 15.9312 14.1864 14.6511 13.1766 13.9442C12.1819 13.248 10.9363 13 9.00002 13C7.06372 13 5.81814 13.248 4.82348 13.9442Z"
+										fill="currentColor"
+									/>
+								</svg>
+								<span>Войти</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<main class="inner-page">
+			<div class="container">
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="/">Главная</a></li>
+						<li class="breadcrumb-item active" aria-current="page">Корзина</li>
+					</ol>
+				</nav>
+			</div>
+			<div class="container page-content">
+				<div id="cartApp" class="cart-page">
+					<div class="row">
+						<div class="col-lg-8 col-xxl-9 cart-content">
+							<div class="content">
+								<h1 class="basic-title">Корзина<sup>3</sup></h1>
+								<div class="cart-list-wrapper">
+									<div class="cart-list-item">
+										<div class="catalog-item">
+											<div class="content">
+												<div class="pic">
+													<a href="#">
+														<img src="img/sale-2.jpg" class="img-fluid" />
+													</a>
+												</div>
+												<div class="info">
+													<a href="#">
+														<div class="name">Корпус для iPhone 8 серебристый</div>
+													</a>
+													<div class="rest">Остаток на складе: 100 шт.</div>
+												</div>
+											</div>
+										</div>
+										<div class="order-info">
+											<div class="price-block">
+												<div class="count"><input title="Количество" type="number" inputmode="numeric" pattern="[0-9]*" min="1" max="100" value="1"></div>
+												<div class="prices">
+													<span class="price price--new">
+														3599&nbsp;
+														<span class="currency">₽</span>
+													</span>
+													<span class="price price--old">
+														8399&nbsp;
+														<span class="currency">₽</span>
+													</span>
+												</div>
+											</div>
+											<div class="action">
+												<a href="Javascript:void(0)" title="Удалить из корзины">
+													<i class="fas fa-times"></i>
+												</a>
+											</div>
+										</div>
+									</div>
+									<div class="cart-list-item">
+										<div class="catalog-item">
+											<div class="content">
+												<div class="pic">
+													<a href="#">
+														<img src="img/main-image.jpg" class="img-fluid" />
+													</a>
+												</div>
+												<div class="info">
+													<a href="#">
+														<div class="name">Шлейф для iPhone 5S камера/сенсор/микрофон в сборе</div>
+													</a>
+													<div class="rest">Остаток на складе: 100 шт.</div>
+												</div>
+											</div>
+										</div>
+										<div class="order-info">
+											<div class="price-block">
+												<div class="count"><input title="Количество" type="number" inputmode="numeric" pattern="[0-9]*" min="1" max="100" value="1"></div>
+												<div class="prices">
+													<span class="price price--new">
+														699&nbsp;
+														<span class="currency">₽</span>
+													</span>
+													<span class="price price--old">
+														1399&nbsp;
+														<span class="currency">₽</span>
+													</span>
+												</div>
+											</div>
+											<div class="action">
+												<a href="Javascript:void(0)" title="Удалить из корзины">
+													<i class="fas fa-times"></i>
+												</a>
+											</div>
+										</div>
+									</div>
+									<div class="cart-list-item">
+										<div class="catalog-item">
+											<div class="content">
+												<div class="pic">
+													<a href="#">
+														<img src="img/hit-4.jpg" class="img-fluid" />
+													</a>
+												</div>
+												<div class="info">
+													<a href="#">
+														<div class="name">Защитное стекло для камеры iPhone</div>
+													</a>
+													<div class="rest">Остаток на складе: 58 шт.</div>
+												</div>
+											</div>
+										</div>
+										<div class="order-info">
+											<div class="price-block">
+												<div class="count"><input title="Количество" type="number" inputmode="numeric" pattern="[0-9]*" min="1" max="100" value="1"></div>
+												<div class="prices">
+													<span class="price">
+														399&nbsp;
+														<span class="currency">₽</span>
+													</span>
+												</div>
+											</div>
+											<div class="action">
+												<a href="Javascript:void(0)" title="Удалить из корзины">
+													<i class="fas fa-times"></i>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-xxl-3 order-block">
+							<div class="content">
+								<div class="cart-total">
+									<span class="summary-text">Итого:</span><span class="summary-value">4697&nbsp;<span class="currency">₽</span></span>
+								</div>
+								<div class="order-info">
+									<p>Товары: 3шт.</p>
+									<p>Размер скидки: 5500&nbsp;<span class="currency">₽</span></p>
+								</div>
+								<div class="cart-buttons">
+									<a class="btn btn-cart-apply" href="Javascript:void(0);">Заказать</a>
+									<a class="btn btn-cart-reset" href="Javascript:void(0);">Очистить корзину</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<div class="footer">
+			<div class="container">
+				<div class="footer-top-row">
+					<div class="row">
+						<div class="col-md-4 footer-links-block">
+							<h4>Помощь</h4>
+							<ul class="column-list column-list--two">
+								<li>
+									<a href="#">Как сделать заказ</a>
+								</li>
+								<li>
+									<a href="#">Оплата</a>
+								</li>
+								<li>
+									<a href="#">Возврат</a>
+								</li>
+								<li>
+									<a href="#">Доставка</a>
+								</li>
+								<li>
+									<a href="#">Вопрос/ответ</a>
+								</li>
+								<li>
+									<a href="#">Гарантии</a>
+								</li>
+								<li>
+									<a href="#">Скидки</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-sm-6 col-md-3 col-xxl-2 footer-links-block">
+							<h4>Партнерам</h4>
+							<ul>
+								<li>
+									<a href="#">Оптовым продавцам</a>
+								</li>
+								<li>
+									<a href="#">Продавцам</a>
+								</li>
+								<li>
+									<a href="#">Поставщикам</a>
+								</li>
+								<li>
+									<a href="#">Дилерская сеть</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-sm-6 col-md-3 col-xxl-2 footer-links-block">
+							<h4>ПроЗАПЧАСТИ</h4>
+							<ul>
+								<li>
+									<a href="#">О нас</a>
+								</li>
+								<li>
+									<a href="#">Реквизиты</a>
+								</li>
+								<li>
+									<a href="#">Отзывы</a>
+								</li>
+								<li>
+									<a href="#">Новости</a>
+								</li>
+								<li>
+									<a href="#">Контакты</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-sm-6 col-md-2 footer-links-block">
+							<h4>Мы в соцсетях</h4>
+							<ul>
+								<li>
+									<a href="#">Вконтакте</a>
+								</li>
+								<li>
+									<a href="#">Одноклассники</a>
+								</li>
+								<li>
+									<a href="#">Телеграм</a>
+								</li>
+								<li>
+									<a href="#">YouTube</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="footer-bottom-row">
+					<p>
+						2022 © Общество с ограниченной ответственностью «ПроЗАПЧАСТИ» - специализированный интернет-магазин запчастей для ваших гаджетов.
+						<br />
+						Все права защищены. Доставка по всей России.
+						<a href="#">Политика конфеденциальности.</a>
+					</p>
+					<div class="dev-wrapper">
+						<a href="http://www.mediatip.ru" class="pic" target="_blank" title="[ мы создаём - все завидуют ]">
+							2021 © создание сайта, обслуживание и поддержка
+							<img src="img/copyright_gray.png" width="40" class="img-fluid" />
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="js/jquery.mCustomScrollbar.min.js"></script>
+		<script type="text/javascript" src="js/wow.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="js/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="js/fancybox.umd.js"></script>
+		<script type="text/javascript" src="js/front.js"></script>
+	</body>
+</html>

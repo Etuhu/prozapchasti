@@ -248,12 +248,10 @@ const sliderItemThumbs = new Swiper(".slider__thumbs--item .swiper", {
 		},
 		575: {
             spaceBetween: 5,
-            // slidesPerView: 5,
             slidesPerView: 5,
 		},
 		768: {
             spaceBetween: 5,
-            // slidesPerView: 5,
             slidesPerView: 5.5,
 		},
         992: {
