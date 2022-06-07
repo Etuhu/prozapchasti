@@ -580,7 +580,8 @@
 						background-color: rgba(255, 255, 255, 0);
 						border: unset;
 					}
-					.add-to-cart-button {
+					.add-to-cart-button,
+					.request-button {
 						color: white;
 						background-color: $red;
 						border-radius: 10px;
@@ -606,7 +607,15 @@
 							transition: 0.2s ease;
 						}
 					}
-					.add-to-cart-button + .favorite-button {
+					.request-button {
+						background-color: #62BCA2;
+						&:hover,
+						&:focus {
+							background-color: #7fbeac;
+						}
+					}
+					.add-to-cart-button + .favorite-button,
+					.request-button + .favorite-button {
 						margin-left: 20px;
 						@media (max-width: 1599px) {
 							margin-left: 15px;
