@@ -326,19 +326,45 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 });
 
-//Сворачивание-оазворачивание списка характеристик на странице товара
+//Сворачивание-разворачивание списка характеристик на странице товара
 var collapseBtn = document.querySelector(".parameters-collapse-button");
 var parametersList = document.querySelector(".parameters .parameters-wrapper");
+var innerTable = parametersList.querySelector(".parameters-list");
 
-let parametersCollapse = function () {
-	parametersList.classList.toggle("max");
-	if (!parametersList.classList.contains("max")) {
+if (innerTable.offsetHeight <= 200) {
+	collapseBtn.remove();
+} else {
+	parametersList.style.height = innerTable.offsetHeight / 2 + "px";
+	parametersList.classList.add("fog");
+}
+
+var parametersCollapse = function () {
+	if (parametersList.style.height !== "auto") {
+		parametersList.classList.remove("fog");
 		collapseBtn.innerHTML = "Развернуть характеристики";
+		parametersList.style.height ="auto";
 	} else {
+		parametersList.classList.add("fog");
 		collapseBtn.innerHTML = "Свернуть характеристики";
+		parametersList.style.height = innerTable.offsetHeight / 2 + "px";
 	}
 };
-
 collapseBtn.addEventListener("click", function () {
 	parametersCollapse();
+});
+
+//Определение необходимости ограничения высоты блока с описанием товара на странице товара
+var catalogItemDescription = document.querySelector(".catalog-item-page .catalog-item-info .description");
+var itemDescriptionHeightResizer = function () {
+	if ((catalogItemDescription.offsetHeight > 250) && (document.documentElement.clientWidth > 991)) {
+		catalogItemDescription.classList.add("max");
+	} else if (document.documentElement.clientWidth < 992) {
+		catalogItemDescription.classList.remove("max");
+	}
+};
+itemDescriptionHeightResizer();
+
+
+window.addEventListener("resize", function () {
+	itemDescriptionHeightResizer();
 });

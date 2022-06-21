@@ -5511,7 +5511,6 @@ form button[type=submit]:active:hover, form button[type=submit]:active:focus {
   font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 55px;
-  height: 20rem;
   overflow-y: auto;
   padding-right: 30px;
   scrollbar-color: #de0000 #e6e9f0;
@@ -5519,7 +5518,6 @@ form button[type=submit]:active:hover, form button[type=submit]:active:focus {
 }
 @media (max-width: 1599px) {
   .catalog-item-page .item-view .catalog-item-top-line .catalog-item-info .description {
-    height: 17rem;
     margin-bottom: 40px;
     padding-right: 15px;
   }
@@ -5545,6 +5543,14 @@ form button[type=submit]:active:hover, form button[type=submit]:active:focus {
 @media (max-width: 499px) {
   .catalog-item-page .item-view .catalog-item-top-line .catalog-item-info .description {
     margin-bottom: 30px;
+  }
+}
+.catalog-item-page .item-view .catalog-item-top-line .catalog-item-info .description.max {
+  height: 20rem;
+}
+@media (max-width: 1599px) {
+  .catalog-item-page .item-view .catalog-item-top-line .catalog-item-info .description.max {
+    height: 17rem;
   }
 }
 .catalog-item-page .item-view .catalog-item-top-line .catalog-item-info .description::-webkit-scrollbar {
@@ -5711,22 +5717,15 @@ form button[type=submit]:active:hover, form button[type=submit]:active:focus {
 .catalog-item-page .item-view .catalog-item-bottom-line .parameters .parameters-wrapper {
   margin-bottom: 20px;
   transition: 0.3s ease;
-  height: 17rem;
   overflow: hidden;
   position: relative;
 }
 @media (max-width: 1599px) {
   .catalog-item-page .item-view .catalog-item-bottom-line .parameters .parameters-wrapper {
-    height: 15rem;
     margin-bottom: 0;
   }
 }
-@media (max-width: 991px) {
-  .catalog-item-page .item-view .catalog-item-bottom-line .parameters .parameters-wrapper {
-    height: 13rem;
-  }
-}
-.catalog-item-page .item-view .catalog-item-bottom-line .parameters .parameters-wrapper::after {
+.catalog-item-page .item-view .catalog-item-bottom-line .parameters .parameters-wrapper.fog::after {
   content: "";
   width: 100%;
   height: 50px;
